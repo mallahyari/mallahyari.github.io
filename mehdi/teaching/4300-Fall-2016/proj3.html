@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>CSCI 4300 - Project 3</title>
+<style>
+li {
+	padding-bottom:10px;
+}
+
+table {
+	width:40%;
+}
+table td {
+	height:30px;
+	padding-left:10px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+           <div id="header">
+             <div class="titles">          
+                <h3>
+                                University of Georgia <br />
+                                Computer Science Department
+                </h3>
+                <hr />
+                <h1> CSCI 4300 - Web Programming <br />  Fall 2016</h1> 
+                             
+             </div>
+             <div class="spacer"></div>
+           </div>
+           <div id="proj3">
+           	<h2 style="text-align:center">Project 3: Movie Reviews </h2>
+            <p><strong>Due:&nbsp;&nbsp;&nbsp; October 10, 2016</strong><span style="color: red"> (Extended)</span></p>
+            <p>In this project you will create a web application using Model-View-Controller (MVC) approach that involves <em>movies</em>, <em>reviews</em> and <em>movie reviews</em>. You must use the MySQL database called <span class="code_format">imdb2</span> (see below) to get the required information. The user name and password are given on <span class="code_format">wp420</span> in the directory <span class="code_format">~/mehdi/cs4300/dbinfo.txt</span>.</p>
+        <h3>Turn In</h3>
+        <ul>
+          <li>Submit a directory with your complete application to the user <span class="code_format">cs4300b</span> on <span class="code_format">nike.cs.uga.edu</span>. Include all the source code, i.e. <span class="code_format">.java</span> files.&nbsp; NOTICE: Comments  are <em>required</em> in your source code!  These comments should make it easy to read and follow the logic of your code.&nbsp; Also, your source code should be well  formatted. Also include the Web application directory structure, and the final (deployed) WAR archive file.</li>
+          <li>A <span class="code_format">README</span>.txt file providing the complete URL to use when invoking your application.</li>
+          </ul>
+       
+        <h3>Project  description:</h3>
+        <ul>
+        	<li><h3 style="margin-bottom:-5px">Functionalities:</h3>
+            	<p>Your application <em>must</em> provide the following functionalities:</p>
+            	<ul>
+        			<li>View the titles of all movies of a selected genre</li>
+            		<li>View information and reviews for a selected movie</li>
+            		<li>Enter a new movie</li>
+                <li>Enter a review for a movie</li>
+            		<li>Delete review(s) of a movie</li>
+                <li>Delete a movie</li>
+                <p>Please note that if a movie is deleted, all of its reviews must also be deleted.</p>
+        		</ul>
+            </li>
+            <li>
+            You will need to create a database table, <span class="code_format">reviews</span>, in the <span class="code_format">imdb2</span> database to store reviews for movies. The <span class="code_format">reviews</span> table will need a <em><strong>foreign key</strong></em> linking it to the <span class="code_format">movies</span> table. The <span class="code_format">reviews</span> table <em>must</em> have the following fields:
+            	<pre>
+                id INT(11)
+                movie_id INT(11)
+                review VARCHAR(256)
+                </pre>
+              </li>
+            
+            <li>Your application must have an HTML file called <span class="code_format">index.html</span>. This HTML file is the entry point (home page) of your application. The user should be able to use <span class="code_format">index.html</span> to run different functionalities. Additionally,  Your  application should have a few HTML files to provide the aforementioned functionalities. All HTML files except for <span class="code_format">index.html</span> <em>must</em> be generated from FreeMarker templates. </li>
+          
+          <li>Your program <em>must</em> have 4 packages as follows:
+          	<ol>	
+            	<li><span class="code_format">edu.uga.cs4300.boundary:</span> includes the Servlet class that handles all the requests and responses. The Servlet directly interacts with the <em>controller</em> class. </li>
+                <li><span class="code_format">edu.uga.cs4300.logiclayer:</span> contains the Java class <span class="code_format">MovieLogicImpl</span>. This class is the <em>controller</em> class for all the functionalities of the application. <span class="code_format">MovieLogicImpl</span> class directly interacts with the <em>Servlet</em> and <em>persistent layer</em> classes.</li>
+                <li><span class="code_format">edu.uga.cs4300.persistlayer:</span> includes the following Java files:
+                	<ul>
+                    	<li>Define an <em>abstract class</em> called <span class="code_format">DbAccessConfiguration</span> that includes all the variables (with proper values) required to connect to the database including <span class="code_format">DB_DRIVE_NAME</span>, <span class="code_format">DB_CONNECTION_URL</span>, <span class="code_format">DB_CONNECTION_USERNAME</span> and <span class="code_format">DB_CONNECTION_PASSWORD</span>.
+                        
+                        <li>Define an <em>interface</em> called <span class="code_format">DbAccessInterface</span> with the following methods:
+                       		<pre>
+        public Connection connect()
+	
+	public ResultSet retrieve (Connection con, String query)
+
+	public int create (Connection con, String query)
+	
+	public int update (Connection con, String query)
+	
+	public int delete (Connection con, String query)
+	
+	public void disconnect(Connection con)
+                            </pre> 
+                        </li>
+                        <li>Define a class called <span class="code_format">DbAccessImpl</span>, which must implement the <span class="code_format">DbAccessInterface</span> interface.</li>
+                        <li>Define a class called <span class="code_format">MoviePersistImpl</span>, which is the primary <em>persistent (model) layer</em> class. This class <em>must</em> explicitly communicate with the <span class="code_format">DbAccessImpl</span> class to run the SQL queries.</li>
+                    </ul>
+                </li>
+                <li><span class="code_format">edu.uga.cs4300.objectlayer:</span> includes the <em>Movie</em> and <em>Review</em> classes. These classes should be created according to the database tables, <em>movies</em> and <em>reviews</em>, respectively.</li>
+            </ol>
+          </li> 
+          
+          <li>It is your responsibility to discover the column names and create a suitable SQL query to retrieve the required data.  For example, you may use the <span class="code_format">mysql</span> command to connect to the <span class="code_format">imdb2</span> database and then discover the table names, as well as the defined columns and their types.</li>  
+          
+          <li>The application&rsquo;s WAR archive  must have a name of the form <em>firstname_lastname</em>_review.war and it must be deployed to our Wildfly Application Server on <span class="code_format">wp420</span> by copying the WAR  file to the directory <span class="code_format">/opt/wildfly/standalone/deployments/project3</span>.&nbsp; Remember to set the read permissions of the  WAR file to world-readable.&nbsp; In order to set the permissions, you need to run the following Unix command after you copied the file into the <span class="code_format">project3</span> directory.
+          <pre>chmod a+x /opt/wildfly/standalone/deployments/project3/firstname_lastname_review.war</pre>
+          </li>
+          <li>Your application must be  accessible at the following URL:
+          <p style="margin-left:20px;">http://wp420.cs.uga.edu:8080/<em>firstname</em>_<em>lastname</em>_review/index.html</p>
+          <p>(of course, substitute your name  in the URL above).</p>
+          <p>You have to use your username and password that were given in the class to able to connect to our server. The command to connect to our server is:
+<pre>ssh your_username@wp420.cs.uga.edu</pre></p>
+
+<strong>Important Notice: </strong> <em>Before you create (export) your <span class="code_format">.war</span> file and deploy it on the server, please make sure you have changed the <strong>username</strong> and <strong>password</strong> to the correct ones for the database <span class="code_format">imdb2</span> on the server. </em>
+          </li> 
+        </ul>
+       
+          <h3>How to use MySQL database</h3>
+<ul>
+<li>You require to download and install MySQL available at <a href="http://dev.mysql.com/downloads/mysql/">here</a>. </li>
+<li>You can connect to the MySQL database using the default username/password (root/given_password): 
+<pre>mysql -uroot -pgiven_password</pre>
+</li>
+<li>Create a database and call it <span class="code_format">imdb2</span>.</li> 
+<li>Import the this <a href="resources/imdb.sql">imdb database</a> to your newly created <span class="code_format">imdb2</span> database.
+<li>Check to make sure the <span class="code_format">imdb2</span> database has been populated successfully.</li>
+</ul>  
+
+<h3> Grading Rubric</h3>
+<table border="1">
+<th>Accomplishment</th><th>Points</th>
+<tbody>
+	<tr><td>Entry view</td><td>5</td></tr>
+    <tr><td>View for all movies of a genre</td><td>5</td></tr>
+    <tr><td>View to submit a movie</td><td>5</td></tr>
+    <tr><td>View to submit a review</td><td>5</td></tr>
+    <tr><td>View to edit a movie</td><td>5</td></tr>
+    <tr><td>View to edit/remove a review</td><td>5</td></tr>
+    <tr><td>Style (indentation, comments, ...)</td><td>10</td></tr>
+    <tr><td>Listing movies of a selected genre works</td><td>10</td></tr>
+    <tr><td>Displaying selected movie and review works</td><td>10</td></tr>
+    <tr><td>Entering movie works</td><td>10</td></tr>
+    <tr><td>Entering review works </td><td>10</td></tr>
+    <tr><td>Deleting movie works</td><td>10</td></tr>
+    <tr><td>Deleting review works</td><td>10</td></tr>
+    <tr><td><em><strong>Total</strong></em></td><td><em><strong>100</strong></em></td></tr>
+    
+</tbody>
+</table>
+     
+
+
+
+
+</div> <!-- proj2 -->
+</div>
+</body>
+</html>

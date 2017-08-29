@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl">
+        <rdfs:comment xml:lang="en">An example ontology that contains Semantic Web concepts and some semantic related technologies.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#isPartOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#impactsOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#impactsOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#isFrameworkOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#isFrameworkOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Services"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#isPartOf">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Architecture_and_infrastructure_ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Architecture_and_infrastructure_">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#included_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Benchmarking_ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Benchmarking_">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#BioMOBY -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#BioMOBY">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Cloud_Computing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Cloud_Computing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment>Cloud computing for semantic data processing. Cloud computing offers challenges in harnessing its inexhaustible, dynamic supply of processing and storage - this is especially true with data. Semantics advances these methods by improving data abstractions and data relationships.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Database_Technologies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Database_Technologies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Semantic repositories and databases:
+
+    Storage schemas optimized for RDF data
+    Reasoning supported by data management infrastructures
+    Indexing structures for schema-less or schema-relaxed semantic data, storage
+    Density and performance improvements
+    Efficient query processing
+    Embedded semantic data processing (stored procedures and storage engine extension APIs)
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Digital_Libraries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Digital_Libraries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Digital Libraries are fast becoming significant resources for the world’s knowledge. Even though a lot of their content is already accessible via harvesting to the visible Web, much more could be exploited, and better exploited, through the Semantic Web. 
+Semantic Web technologies for digital libraries will therefore take advantage of much richer assumptions on domain-specific semantics, consistency and quality of content.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">The Linked Open Data (LOD) as well as complementary open data initiatives, are becoming significant contributors to the information landscape of the Web.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data_consumption_ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data_consumption_">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#included_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data_publication_ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data_publication_">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#included_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Machine_Learning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Machine_Learning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Data-driven approaches  like machine learning approaches are focused on the creation of new knowledge by extraction and mining it directly from data. It helps for extraction and augmentation of ontological knowledge from data using statistical and machine learning methods </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Mobile_Web -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Mobile_Web">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Semantic Web technologies can be successfully exploited to address interoperability, adaptation and personalization, thus enabling a completely new class of mobile applications. Some of the interesting topic for mobile Semantic Web applications:
+  Management of semantic data in a mobile environment (including reasoning)
+  Scalability and performance of semantic technologies on mobile devices
+  Interoperability of mobile applications based on semantic technologies
+  Provenance of semantic data in mobile environments
+  Mobile technologies for (and applications of) linked data, including mobile social applications</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Natural_Language_Processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Natural_Language_Processing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Natural language is the main means of communication between humans and as a result a huge amount of content on the Web is still textual or at least semi-structured, combining some markup (e.g. in the form of tags) with unstructured content. Natural language processing and text mining are therefore crucial building blocks for the semantic analysis of unstructured and textual data and thus important research areas for the Semantic Web. Natural language can represent an effective and intuitive means for querying and accessing semantic data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#OWL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#OWL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:comment xml:lang="en">a family of knowledge representation languages for authoring ontologies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#OWL-S -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#OWL-S">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Ontology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Ontology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:comment xml:lang="en">formally represents knowledge as a set of concepts within a domain, and the relationships between those concepts.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#QuASAR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#QuASAR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#RDF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#RDF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:comment xml:lang="en">simple language for expressing data models, which refer to objects (&quot;resources&quot;) and their relationships.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#RDFS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#RDFS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:comment xml:lang="en">extends RDF and is a vocabulary for describing properties and classes of RDF-based resources, with semantics for generalized-hierarchies of such properties and classes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Data_Management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#SPARQL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#SPARQL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:comment xml:lang="en">RDF query language, a protocol and query language for semantic web data sources.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#SSWAP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#SSWAP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Data_Management -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Data_Management">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">During last years we have witnessed a tremendous increase in the amount of semantic data that is available on the Web in almost every field of human activity. For the successful discovery, sharing, distribution and organization of this emerging information universe, the ability to understand and manage the semantics of the data is of paramount importance. Semantic data management refers to a range of techniques that can be employed for storing, querying, manipulating and integrating data based on its meaning.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Searching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Searching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">semantic searching and browsing:
+    Dataspaces for the Semantic Web
+    Semantic data analytics
+    Data dynamics
+    Emergent data semantics
+    Data- and query- specific strategies for dynamic data materialization
+    Adaptive, multi-query optimization
+    Multi-modal retrieval (quantitative and statistical) and ranking algorithms (FTS, co-occurrence, concordance, temporal, spatial);
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Security">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Security and privacy
+
+    Access control specification languages and enforcement strategies
+    Consistency checking of access control policies
+    Incremental maintenance of security annotations
+    Privacy aware access control models
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Mining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Mining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Web mining for the Semantic Web
+
+    Graph mining
+    Social network analysis
+    Link prediction
+    Statistical relational learning
+    Ranking methods and learning to rank
+    Inductive Logic Programming on the Semantic Web
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Reasoning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Reasoning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Approximate reasoning techniques
+Scalable reasoning
+Reasoning with inconsistency
+Reasoning under uncertainty
+Reasoning with large, expressive or distributed ontologies
+Commonsense Reasoning
+Non-deductive approaches to reasoning
+Reasoning on the Web of Data
+Declarative rule-based reasoning techniques
+Rule languages, standards, and rule systems
+RDF- and OWL-based reasoning</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Services"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Services -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Services">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Semantic Web Services, like conventional web services, are the server end of a client–server system for machine-to-machine interaction via the World Wide Web. Semantic services are a component of the semantic web because they use markup which makes data machine-readable in a detailed and sophisticated way (as compared with human-readable HTML which is usually not easily &quot;understood&quot; by computer programs).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_access_to_legacy_data_ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_access_to_legacy_data_">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_repositories_and_databases_ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_repositories_and_databases_">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_web_for_e-Business_and_e-Learning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_web_for_e-Business_and_e-Learning">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Semantic Web, appears as a promising technology for implementing eLearning and eBusiness The Semantic Web constitutes an environment in which human and machine agents will communicate on a semantic bases.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sensor_Web -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sensor_Web">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Combining sensor network and semantic technologies, for the purpose of management, interpretation and analysis of the observed environment.
+Data models and querying solutions for semantic sensor networks.
+Programming languages and abstractions for sensor network supporting contextual and background models.
+Architectures and middleware for semantic sensor networks.
+In-network data processing and filtering techniques based on contextual and semantic knowledge.
+Ontologies and rules for semantic sensor networks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Social_Web_and_Web_Science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Social_Web_and_Web_Science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Related_Technologies"/>
+        <rdfs:comment xml:lang="en">Social Web and Web Science aims at bringing together researchers from these communities to address various challenges from improving Social Web user experiences with Semantic Web technologies in order to build novel semantic applications using Social Web data, as well as understanding the various patterns of the Web.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Traceability_and_trustworthiness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Traceability_and_trustworthiness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#URI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#URI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Sematic_Web_Stack"/>
+        <rdfs:comment xml:lang="en">is an identifier used to identify a name or a resource.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Virtualized_semantic_stores_and_scalability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Virtualized_semantic_stores_and_scalability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Related_Topics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#WSMF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#WSMF">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#WSMO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#WSMO">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Semantic_Web_Service_frameworks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#included_Topics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#included_Topics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/0/OntologySW.owl#Linked_Open_Data"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

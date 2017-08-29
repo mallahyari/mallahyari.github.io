@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>Project 1</title>
+<style>
+li {
+	padding-bottom:10px;
+}
+p {
+	line-height:20px;
+	text-align:justify;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+           <div id="header">
+             <div class="titles">          
+                <h3>
+                                University of Georgia <br />
+                                Computer Science Department
+                </h3>
+                <hr />
+                <h1> CSCI 4300 - Web Programming <br />  Spring 2017</h1> 
+                             
+             </div>
+             <div class="spacer"></div>
+           </div>
+           <div id="proj1">
+           	<h2 style="text-align:center">Project 1: Recipe</h2>
+            <p><strong>Due:&nbsp; Feb 9, 2017</strong></p>
+  <table width="90%" height="74" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="666"><div>
+        <p>This assignment tests your understanding of basic HTML and CSS. You will create several files related to a recipe web site for a fictional pie company named Granny's Pies. Turn in the following files:</p>
+        <ol>
+          <li><span class="bluecol"><span class="bluecol"><span class="bluecol">index.html</span></span></span>, the first of two web pages (with an optional CSS style sheet file);  <em>appearance is up to you</em></li>
+          <li><span class="bluecol"><span class="bluecol">pie.html</span></span>, the second of two web pages;  <em>must match a particular specified appearance</em></li>
+          <li><span class="bluecol">recipe.css</span>, the style sheet for <span class="bluecol"><span class="bluecol">pie.html</span></span></li>
+          </ol>
+          <p>For full credit, your files must be uploaded to the web and must match the guidelines in this document.</p><br/>
+          <h4>Index Page:</h4>
+          <p>The first part of your task is to create a front page for this web site, stored in a file named <span class="bluecol"><span class="bluecol">index.html</span></span>. Your front page must contain a link to <span class="bluecol">pie.html</span>.  The file must also be at least 20 lines long and must contain at least 4 different HTML elements in its body.  It also may not significantly borrow content from your <span class="bluecol">pie.html</span>.  Otherwise, this front page can have any appearance you like.  If you like, you may use an optional CSS file with this page named <span class="bluecol">index.css </span> and submit it with your other files.  Be creative!  We may show some students' pages in class.</p><br/>
+          
+          <h4>Pie Recipe Page:</h4>
+          <p>The second part is to recreate a specific web page of a recipe for lemon meringue pie, stored in a file named <span class="bluecol">pie.html</span>.  Unlike <span class="bluecol">index.html</span>, this page must exactly match the appearance specified in this document.<br/><br/> You must match in appearance the pie web page shown on the <strong>next page</strong> of this document.  The width of the screenshot below is based on a browser window width of 1024px; if your screen is a different size, the width of your page may not exactly match.  <em>(Firefox's Web Developer Toolbar add-on can help you resize your browser to any dimension; you could use 1024x768 to compare the images.)</em>  Any line breaks shown are done automatically by the browser, except ones that are clearly much narrower than the page width, such as the line &quot;One 9-inch pie&quot;.</p><br/>
+          
+          <h4>Provided Output Text:</h4>
+          <p>You <strong>don't need to type in all of the text</strong> of the pie web page, only the HTML tags.  There is a <strong>provided text file</strong> <a href="resources/recipe.txt"> here</a> that you can copy and paste into your text editor to get started.  Then you can add the appropriate HTML tags to the file and save it as your <span class="bluecol">.html</span> page.</p><br/>
+          
+          <h4>Appearance and Behavior Details:</h4>
+          <p>The pie web page's title text should be <strong>Grandma's Lemon Meringue Pie</strong> .<br /> All headings on the page should use a foreground color of #A4A400 (red=164, green=164, blue=0) and a background color of #F0F0F0 (red=240, green=240, blue=240).  The font families for headings are:
+Lucida Sans Unicode, Helvetica, Arial, or any sans-serif font available on the system (in that order).  The page's main heading is aligned to the center of the page body, and uses a 22pt bold font.  Other headings on the page are left-aligned and appear in an 18pt normal font. All headings should be underlined.</p>
+<p>The overall page's <strong>body</strong> should have a white background.  Text in the body should have a foreground color of #404040 (red=64, green=64, blue=64) and use an 11pt font.  The <strong>font</strong> families for page text are Georgia, Garamond, or any serif font available on the system.  Any links on the page should use the color #A4A400 (red=164, green=164, blue=0), matching the color of the page headings.</p>
+<p>In the Ingredients list, the underlined words &quot;tbsp&quot; and &quot;tsp&quot; are abbreviations for &quot;tablespoons&quot; and &quot;teaspoon&quot; respectively.  When the user hovers the mouse over these abbreviations, the full word should appear as a tooltip.</p>
+<p>At the end of the Directions section, the <strong>deleted word</strong> &quot;cake&quot; with a strike-out line through it is replaced by the word &quot;pie&quot;.</p>
+<p>After the Links section there is a short <strong>copyright notice</strong> that appears as a section of <strong>pre-formatted text</strong> in a monospace font.  The text is spaced such that the last letter lines up on horizontally for each of the three lines.</p>
+<img src="images/out.png" />
+
+<h4>Appearance and Behavior Details (continued):</h4>
+<p>The names of the four major steps of the <strong>recipe directions</strong> (such as &quot;Preheat Oven&quot;) are strongly emphasized.  The <strong>quotations</strong> from the users appear in an italic font as indented blocks with background color #FFFFA8 (red=255, green=255, blue=168).  Some words in the last quote are bolded for emphasis.</p>
+<p>The picture of the pie and the W3C validator <strong>images</strong> at the bottom come from the following images, respectively:</p>
+<ul>
+<li><a href="images/pie.jpg">pie.jpg</a> <em>(use an absolute URL to link to this image; don't link to a relative URL on your hard drive)</em></li>
+<li><a href="images/w3c-html.png">w3c-html.png</a></li>
+<li><a href="images/w3c-css.png">w3c-css.png</a></li>
+</ul>
+
+<p>The page bottom has four <strong>links</strong>. The &quot;Home&quot; link should go to your <span class="bluecol">index.html</span> page.  Use a relative URL and assume it is located on the same site and directory as <span class="bluecol">pie.html</span>.  The &quot;Search for other lemon meringue pie recipes&quot; text, &quot;W3C HTML5&quot; button, and &quot;W3C CSS&quot; button should link to the following web pages, respectively:</p>
+<ul>
+<li><a href="http://www.google.com/search?q=lemon+meringue+pie+recipe&start=10">http://www.google.com/search?q=lemon+meringue+pie+recipe&amp;start=10</a> </li>
+<li><a href="https://validator.w3.org/">w3c validator</a></li>
+<li><a href="https://jigsaw.w3.org/css-validator/">w3c css validator</a></li>
+</ul>
+<p>All other decisions about styling on the page are left to the web browser.  Any styles mentioned previously that are the same as browser defaults do not have to be explicitly included in your CSS style sheet.  The screenshot in this document was taken on Windows XP using Firefox, which may differ from the appearance on your system.</p>
+
+<h4>Extra Features:</h4>
+<p>In addition to the previous required features, you must also complete at least <strong>two (2) of the following</strong> additional requirements in your pie page.  These are features that may have not been covered in detail in lecture;  you will have to explore your resources such as your textbook, lecture slides, or online references to learn how to complete these features.  If you want to complete more than two of the extra features below, that is fine, but only two are required.</p>
+
+<ol>
+<li><strong>Background:</strong> Set the overall page to use a background image of: <a href="images/silverware.jpg">silverware.jpg</a><br/>The image should repeat in both directions across the page and should not move when the page is scrolled.</li>
+<li><strong>Favicon:</strong> Set the page to have a "favorites icon" ("favicon").  Use: <a href="images/pie_icon.gif">pie_icon.gif</a><br/>Favicons are explained in Chapter 3.  The icon may not work in Internet Explorer; you may ignore this.</li>
+<li><strong>Pie bullet:</strong> Set all bulleted lists of items on the page to use an image for their bullet icon rather than the normal black circle. Use the following image: <a href="images/pie_icon.gif">pie_icon.gif</a></li>
+<li><strong>Wide headings:</strong> Place 0.25em horizontal spacing between neighboring letters in all headings on the page.</li>
+<li><strong>5.	Tight heading background: </strong> Make it so that the gray background behind the headings on the page is only behind the text itself, not stretched across the entire width of the page.  <em>(Looks nice with extra feature #1.)</em></li>
+<li><strong>Other: </strong> Do you have an extra feature you'd like to add to your page that isn't listed here? Ask us on the course message board and we'll let you know if it is okay to substitute for one of the above.</li>
+</ol>
+<p>Near the top of your HTML file, <strong>put a comment</strong> saying which extra features you have completed.</p>
+<p>As much as possible, you should implement these changes by modifying your CSS code rather than your HTML. Some of the CSS properties necessary will not have been covered in class, so you must learn them yourself. Try using the textbook or Google.  There are some good HTML and CSS references such as the following sites:</p>
+<ul>
+<li><a href="http://www.w3schools.com/tags/default.asp">HTML References</a> </li>
+<li><a href="http://www.w3schools.com/cssref/default.asp">CSS References</a></li>
+</ul>
+
+<p>A screenshot of the expected output for the extra features is available <a href="images/out-extra.png">here</a>.</p>
+
+<h4>Implementation and Grading:</h4>
+<p>For full credit, your <span class="bluecol">pie.html</span> page must pass the W3C HTML5 validator with no errors (a <span style="background-color:#00EE00">green</span> bar). <em>(Your page is fine as long as you see the green bar and text &quot;This document was successfully checked as HTML5!&quot;)</em>  Choose appropriate HTML tags to match the structure of the content on the page. Do not express style information in HTML with inline styles or presentational HTML tags such as b or font. You may not use any HTML tables in your <span class="bluecol">pie.html</span> page.</p>
+
+<p>You only need to worry about your page's appearance in standards-compliant browsers such as Firefox or Chrome. You will not be tested in Microsoft Internet Explorer or other browsers that do not comply to web standards.</p>
+
+<p>Express all stylistic information on the page using CSS defined in recipe.css. For full credit, your style sheet must successfully pass the W3C CSS validator. Part of your grade comes from expressing your CSS concisely and without unnecessary or redundant styles.  For example, if the page uses the same color or font family for multiple elements on the page, you must group those elements into a single CSS rule, so that it would be possible to change the page's color/font by modifying a single place in the CSS file. Outside of extra features, do not use HTML or CSS constructs that have not been discussed in lecture or the slides, through Chapters 2-3 of the textbook.</p>
+
+<p>We discussed how to use HTML class and id attributes to target elements for styling.  Do not overuse such attributes in your HTML unnecessarily.  If there is already a suitable tag for representing a given piece of content, favor the use of that tag rather than a less appropriate tag with a class or id attached for styling purposes.</p>
+
+<p><strong>Fromat</strong> your HTML and CSS nicely so that it is as readable as possible, similarly to the examples shown in class. Also place a comment header in each file containing your name and section and a brief description of the assignment and the file's contents. You must properly use whitespace and indent your HTML and CSS code following examples shown in class. To keep line lengths manageable, do not place more than one block element on the same line or begin any block element past the 100th character on a line. For reference, our solution has 135 lines of HTML and 45 lines of CSS, though you do not need to match this exactly.</p>
+
+<p>The majority of the points for this assignment will be for the <span class="bluecol">pie.html</span> and its recipe.css files. The <span class="bluecol">index.html</span> will also be graded, but it will be worth fewer points. The main stylistic constraint on your <span class="bluecol">index.html</span> file is that it should pass the W3C HTML5 and CSS validators. Beyond that it can contain any non-obscene content you like, even content that uses material we have not yet learned in lecture. Please do not link to external resources (other than image files  or <span class="bluecol">index.css </span> or <span class="bluecol">recipe.css</span>) from your <span class="bluecol">index.html</span> page.</p>
+
+<p>Part of  your  grade will also come from  successfully  uploading your files to the  <span class="code_format">nike</span> server.  You  should place your files into your public web space (<span class="code_format">public_html</span> directory) in a subdirectory named <span class="code_format">project1</span>, so that it is possible to navigate to your page by entering the following URL into the browser:</p>
+<ul>
+<li><span class="bluecol" style="text-decoration:underline">http://cs.uga.edu/~your_username/project1/pie.html</span></li>
+</ul>
+          
+ <p>If your page is not available at exactly this URL (case-sensitive), you may not receive credit for this part of the
+assignment. Please note that uploading your files to <span class="code_format">nike</span>, while part of  your grade, is NOT the way to turn in
+your program; turn in your  program  through the <span class="code_format">nike</span> server <span class="code_format">submit</span> command. </p>
+
+<p> Create a directory called <span class="code_format">wp4300</span> in your home directory on <span class="code_format">nike</span>.  You will use this directory to implement projects in this course.  In <span class="code_format">wp4300</span>, create a sub-directory <span class="code_format">project1</span>.  You should place your files into the <span class="code_format">project1</span> directory. </p>          
+      <p>Submit your <span class="code_format">project1</span> directory to <span class="code_format">cs4300a</span> on <span class="code_format">nike</span>. You must use  the <span class="code_format">submit</span> command to submit your work, as shown below:</p>
+        <span class="code_format">$  submit project1 cs4300a</span>        
+        <p><strong>Important</strong>: You should execute the <span class="code_format">submit</span> command while being in the parent directory of <span class="code_format">project1</span>,  i.e. <span class="code_format">wp4300 </span>(the current directory must be <span class="code_format">wp4300</span>), or use the absolute path name to <span class="code_format">project1</span>.</p>
+      </div></td>
+    </tr>
+  </table>
+           </div>
+ 
+ 
+ </div>       
+</body>
+</html>

@@ -1,0 +1,12 @@
+section .container {
+    width: 70%;
+}
+
+.openning {
+	margin-top: 20px;
+	font-size: 1.1em;
+	display: block;
+	text-align: left;
+	font-weight: bold;
+
+}

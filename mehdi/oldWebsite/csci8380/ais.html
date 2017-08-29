@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Advanced Information System Page</title>
+<link href= class="" rel="stylesheet" type="text/css" />
+<link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="pageContainer"><h1>CSCI 8380 Advanced Topics in Information Systems</h1>
+<div class="spacer"></div>
+<div><h2>&nbsp;&nbsp;Spring 2012</h2><p>This course is about recent advances in web information systems and the basically focuses on Semantic Web, its characteristics and related technologies.&nbsp;<a href="../index.html">My Home Page</a></p> </div>
+<div id="projects">
+	<h3> Projects</h3>
+	<ul> 
+    	<li>
+	<div id="project1"><p><span class="projectTitle">Project1:</span><b> Designing the first ontology:</b> <i>Identify concepts and
+    relationships in the domain of "Semantic Web".</i><br /> 
+    As a concise description on what I did, first I looked up and located several concepts and their relationships with Sematic Web from Wikipedia and 		    semantic web related conferences (e.g. <a href="http://iswc2012.semanticweb.org/">ISWS</a>, <a href="http://www.w3.org/standards/semanticweb/>">W3C</a> and <a href="http://2012.eswc-conferences.org/">ESWC</a>). Then by using <a href="http://protege.stanford.edu/"><b>Protégé</b></a>, I defined my hierarcy of classes (concepts, related    technologies, etc), properties (ispartOf, impactsOn, etc) and connected different properties to the approperiate concepts. Here's the <a href="OntologySW.owl">source code</a>. Following is a 
+    snapshot of my ontology:</p><br />
+    <div><img src="images/p1_figure1.jpg" width="750" height="600" /></div>
+    </div>
+    <div class="spacer"></div>
+    <hr />
+    </li>
+    <li>
+       <div id="project2"><p><span class="projectTitle">Project2:</span><b> Storing and Quering YAGO:</b> <i><a href="project2.pdf"> Project Description</a></i> <br />
+    As a short description, initially I downloaded the <a href="http://www.mpi-inf.mpg.de/yago-naga/yago/downloads.html"> YAGO2 core and converter</a>, and unzipped them. I could use the converter tool to load YAGO into Jena TDB Store and then query the ontology, but the tool also allows to <b> query</b> YAGO - either in the native query language or in SPARQL. So I chose the latler one and used the converter tool to query YAGO. I entered the SPARQL queries and got the results. You can check out the queries and results in <a href="SPRQL_Results.txt"> here</a>.</p>
+    </div>
+    </li>
+    <li>
+       <div id="project3"><p><span class="projectTitle">Project3:</span><b> Mapping Database into (Semantic) Web using Triplify. </b><br />
+    To be consice I downloaded and installed the <b><a href="http://dev.mysql.com/downloads/"> MySQL </a></b> Database, and then downloaded the sample database called  <b><a href="http://downloads.mysql.com/docs/sakila-db.zip"> Sakila </a></b>database and set it up on MySQL. I also installed <b><a href="http://triplify.org/Overview"> Triplify</a></b>. For mapping the database to semantic web we need to create a <b><a href="config.inc.php"> Configuration</a></b> file for Triplify. Evetually, I ran the Triplify script in the web application, the rest is done by Triplify automatically, it creates a <b><a href="i2XApsJW.part"> RDF File</a></b> which consists of the database schema based on the queries that I had included in the configuration file.</p>
+    </div>
+    </li>
+    
+    
+    
+    
+    </ul>
+  <h3> Paper Reviews </h3>
+  	<ul>
+    	<li> 
+    <div id="paperReview1"><p><span class="projectTitle">Paper Review 1:</span><i> <a href="paper1.pdf"> gStore: Answering SPARQL Queries via Subgraph Matching.</a></i><br /> <a href="PaperReview-01.pdf"> Review </a></p> </div>
+
+    </li>
+    <li>
+    <div id="paperReview2"><p><span class="projectTitle">Paper Review 2:</span><i> <a href="paper2.pdf"> YAGO2: Exploring and Querying World Knowledge in Time, Space, Context, and Many Languages.</a></i><br /> <a href="PaperReview-02.pdf"> Review </a></p> </div>
+
+    </li>
+    <li>
+    <div id="paperReview3"><p><span class="projectTitle">Paper Review 3:</span><i> <a href="paper3.pdf"> YRDF Support in the Virtuoso DBMS.</a></i><br /> <a href="PaperReview-03.pdf"> Review </a></p> </div>
+
+   </li> 
+   <li>
+    <div id="paperReview4"><p><span class="projectTitle">Paper Review 4:</span><i> <a href="paper4.pdf"> Enrichment and Ranking of the YouTube Tag Space and Integration with the Linked Data Cloud.</a></i><br /> <a href="PaperReview-04.pdf"> Review </a></p> </div>
+
+   </li> 
+   <li>
+    <div id="paperReview5"><p><span class="projectTitle">Paper Review 5:</span><i> <a href="paper5.pdf"> Information credibility on twitter.</a></i><br /> <a href="PaperReview-05.pdf"> Review </a></p> </div>
+
+   </li> 
+   
+    <div id="paperReview6"><p><span class="projectTitle">Paper Review 6:</span><i> <a href="paper6.pdf">Answering Queries with Crowdsourcing.</a></i><br /> <a href="PaperReview-06.pdf"> Review </a></p> </div>
+
+   </li>
+   
+   </li> 
+   
+    <div id="paperReview7"><p><span class="projectTitle">Paper Review 7:</span><i> <a href="paper7.pdf">Addressing People’s Information Needs
+Directly in a Web Search Result Page.</a></i><br /> <a href="PaperReview-07.pdf"> Review </a></p> </div>
+
+   </li>
+   
+   </li> 
+   
+    <div id="paperReview8"><p><span class="projectTitle">Paper Review 8:</span><i> <a href="paper8.pdf">Turkalytics: Analytics for Human Computation.</a></i><br /> <a href="PaperReview-08.pdf"> Review </a></p> </div>
+
+   </li>
+   
+   </ul>
+ <h3> Term Project</h3>
+ <ul>
+ 	<li>
+      <div id="termProject"><p><span class="projectTitle"> Predictive Analytics on Facebook Social Graph:</span> You can download the Proposal Presentation from <a href="TermProject.pdf"> here</a> </p> </div>
+      <div class="spacer"></div>
+    </li>  
+    
+    </ul>
+    <h3> Paper Presentation</h3>
+ <ul>
+ 	<li>
+      <div id="presentation"><p><span class="projectTitle">  Leveraging Community-built Knowledge for Type Coercion in Question Answering.</span>
+      <a href="Presentation.pdf">PDF</a> and <a href="Presentation.pptx">PPT</a></p> </div>
+      <div class="spacer"></div>
+    </li>  
+    
+    </ul>
+    
+    
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>

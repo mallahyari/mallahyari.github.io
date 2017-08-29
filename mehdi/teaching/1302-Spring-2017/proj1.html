@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>CSCI 1302 (Project1)</title>
+<style>
+li {
+	padding-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+           <div id="header">
+             <div class="titles">          
+                <h3>
+                                University of Georgia <br />
+                                Computer Science Department
+                </h3>
+                <hr />
+                <h1> CSCI 1302 - Software Development <br />  Spring 2017</h1> 
+                             
+             </div>
+             <div class="spacer"></div>
+           </div>
+           <div id="proj1">
+           	<h2 style="text-align:center">Project 1: Minesweeper Alpha Project</h2>
+            <h3><strong>Due:&nbsp; February 5, 2017</strong> <span style="color: red"> (Extended)</span></h3>
+  <table width="90%" height="74" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="666"><div>
+        <p>In this project, you will implement Minesweeper to play from the command line.</p>
+        <h3>Project  description:</h3>
+        <h4>Please read the entirety of this page before beginning your project.</h4>
+        <p>This first project is meant to ensure that you are able to apply and extend your prequisite knowledge as well as introduce you to developing and testing a Java 7 application in a Linux environment (i.e., the Nike development server). Many aspects of this project will be new to you. You will be asked to do things that you have never been given explicit directions for before. This is just a part of software development. Sometimes you need to research how to solve a problem in order to implement a solution. That being said, the material included in this document should hopefully answer the majority of your questions.</p>
+        <p>Your goal is to develop a non-recursive, non-GUI (GUI = Graphical User Interface) version of the game called Minesweeper. The code for this game will be organized in such a way that the recursive elements of Minesweeper can be added at a later point in time. It will also be organized so that you can add a GUI to it later as well. Interestingly, the organization of some of the classes in this project will also introduce you to some elementary aspects of game programming.</p>
+        <p>Create a directory called <code>cs1302</code> in your home directory on <code>nike</code>.  You will use this directory to implement projects in this course.  In cs1302, create a sub-directory <code>Project1</code>. In Project1, create two sub-directories <code>src</code> and <code>classes</code>. You should place your Java program (described below) in the <code>src</code> directory and your compiled files in the <code>classes</code> directory</p>
+        <h3>Minesweeper Overview</h3>
+        <p>In Minesweeper, the player is initially presented with a grid of undifferentiated squares. Either some randomly-selected squares or seed-selected squares (more on seeds later) are designated to contain mines. Typically, the size of the grid and the number of mines are set in advance by the user or by a seed file. The ratio of the number of mines to the grid size is often used as a measure of an individual game's difficulty. The grid size can also be represented in terms of the number of rows and columns in the grid.</p>
+
+        <p>The game is played in rounds. During each round, the player is presented with the grid, the number of rounds completed so far, as well as a prompt. The player has the option to do 5 different things:</p>
+        <ol>
+          <li>Reveal a square on the grid.</li>
+          <li>Mark a square as potentially containing a mine.</li>
+          <li>Mark a square as definitely containing a mine.</li>
+          <li>Display help information.</li>
+          <li>Quit the game.</li>
+        </ol>
+
+        <p>When the player reveals a square of the grid, different things can happen. If the revealed square contains a mine, then the player loses the game. If the revealed square does not contain a mine, then a digit is instead displayed in the square, indicating how many adjacent squares contain mines (in the recursive implementation, if no mines are adjacent, then the square becomes blank). Typically, there are 8 squares adjacent to any given square, unless the square lies on an edge or corner of the grid.</p>
+
+        <p>The player uses this information to deduce the contents of other squares, and 
+          may perform any of the first three options in the list presented above. When the
+          player marks a square as potentially containing a mine, a <code>?</code> is 
+          displayed in the square. When the player marks the square as definitely 
+          containing a mine, a flag, represented as <code>F</code> is displayed in the 
+          square. The player can mark or reveal any square in the grid, even squares that
+          have already been marked or reveleaed. The logic for determining what happens
+          to the square is always the same.</p>
+
+          <p>The game is won when both all of the mines are located (i.e., all squares 
+containing a mine are marked by the user as containing a mine) and when there 
+are no squares still marked as potentially containing a mine. At the end of the
+game the player is presented with a score. 
+Let <code>rows</code>, <code>cols</code>, <code>mines</code>, and 
+<code>rounds</code> denote the number of rows in the grid, columns in the grid,
+total number of mines, and number of rounds completed, respectively. The 
+player's score is calculated as follows:</p>
+<pre>
+
+  score = (rows * cols) - mines - rounds;
+
+</pre>
+<p>The higher the score, the better. Negative scores are possible.</p>
+
+<h3>The Grid and Interface</h3>
+<p>When the game begins, the following message should be displayed to the player
+once and only once:</p>
+<pre>
+  
+          _
+    /\/\ (_)_ __   ___  _____      _____  ___ _ __   ___ _ __
+   /    \| | '_ \ / _ \/ __\ \ /\ / / _ \/ _ \ '_ \ / _ \ '__|
+  / /\/\ \ | | | |  __/\__ \\ V  V /  __/  __/ |_) |  __/ |
+  \/    \/_|_| |_|\___||___/ \_/\_/ \___|\___| .__/ \___|_|
+                                       ALPHA |_| EDITION
+
+</pre>
+
+<p>Take care when printing this message out to the screen. You will probably need
+to escape some of the characters in order for them to show up correctly.</p>
+
+<p>In this Minesweeper game, the size of the grid is restricted to no more than 10
+rows and 10 columns. The number of rows and columns need not be the same. To be
+more precise, the number of rows must be strictly greater than 0 and less than
+or equal to 10. The number of columns must also be strictly greater than 0 and
+less than or equal to 10. Rows and columns are indexed starting at 0. Therefore,
+in a 10*10 (rows * columns), the first row is indexed as 0 and the last row is
+indexed as 9 (similarly for columns).</p>
+
+<p>Let's assume we are, in fact, playing a 10*10 game of Minesweeper. When the game
+starts, the interface should look like this:</p>
+
+<pre>
+  
+
+   Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ 
+
+</pre>
+
+<p>Please note that the first, third, and second-to-last lines are blank. All other 
+lines, except the last line containing the prompt, start with one blank space. 
+The line containing the prompt contains an extra space after the <code>$</code> 
+so that when the user types in a command, the text does not touch the 
+<code>$</code>.</p>
+<p>The possible commands that can be entered into the prompt as well as their
+syntax are listed in the subsections below. Commands with leading or trailing
+white space are to be interpreted as if there were no leading or trailing
+whitespace. For example, the following two examples should be interpreted the
+same:</p>
+
+<pre>
+  
+
+  minesweeper-alpha$ help
+  minesweeper-alpha$         help
+
+</pre>
+
+<p>The different parts of a command are known as tokens. The <code>help</code>
+command, for example, only has one token. Other commands, such as the
+<code>mark</code> (seen below) have more than one token because other
+pieces of information are needed in order to interpret the command. As a quick
+example (which will be explored in more depth below), the player can
+mark the square at coordinate (0,0) using <code>mark</code> as follows:</p>
+
+<pre>
+  
+  minesweeper-alpha$ mark 0 0
+
+</pre>
+
+<p>In the above example, you can see that the <code>mark</code> command has three 
+tokens. A command with more than one token is still considered syntactically 
+correct if there is more than one white space between tokens. For example, the 
+following four examples should be interpreted the same:</p>
+
+<pre>
+  
+  minesweeper-alpha$ mark 0 0
+  minesweeper-alpha$ mark     0  0
+  minesweeper-alpha$     mark 0 0
+  minesweeper-alpha$   mark     0  0
+
+</pre>
+
+<h3>Command Syntax Format</h3>
+<p>In the sections below, each command will the syntax format that it must adhere
+to in order to be considered correct. Syntactically incorrect commands are
+considered an error. Information about displaying errors to the player is
+contained in a section below. </p>
+<p>In a syntax format string, one or more white space is represented as a
+<code>-</code>. Command tokens are enclosed in <code>[]</code> braces. If the
+contents of a token are surrounded by <code>""</code> marks, then that token can 
+only take on that literal value. If more than one literal value is accepted for
+a token, then the quoted literals are separated by <code>/</code>. If the
+contents of a token are surrounded by <code>()</code> marks, then that token can
+only take on a value of the type expressed in parentheses.  </p>
+
+<p>Syntax format strings are provided in this document in order to help you, the
+student, understand how syntactically correct commands could potentially be 
+inputted by the player. These strings do not directly correspond to anything in
+the Java programming language. You should be able to use the information
+provided in these syntax format strings to parse commands entered by the
+user. </p>
+<h3>Revealing a Square</h3>
+
+<p>In order to reveal a square, the <code>reveal</code> or <code>r</code> command
+is used. The syntax format for this command is as follows: <code>-["reveal"/"r"]-[(int)]-[(int)]-</code>.
+The second and third tokens indicate the row and column indices, respectively, 
+of the square to be revealed. </p>
+
+<p>Let's go back to our 10*10 example. Suppose that we secretly know that there is
+a mine in squares (1,1) and (1,3). Now suppose that the player wants to reveal
+square (1, 2). Here is an example of what that might look like.</p>
+
+<pre>
+  
+   Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ r 1 2
+
+   Rounds Completed: 1
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   | 2 |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ 
+
+</pre>
+<p>After the player correctly entered the command <code>r 1 2</code>, the state of
+the game updates (e.g., number of rounds completed, the grid, etc.), and the
+next round happens. Since there was no mine in square (1,2), the player does not
+lose the game. Also, since the number of mines adjacent to square (1,2) is 2, the
+number 2 is now placed in that cell.</p>
+<p>If the player reveals a square containing a mine, then the following message
+should be displayed and the program should terminate gracefully:</p>
+
+<pre>
+  
+    Oh no... You revealed a mine!
+    __ _  __ _ _ __ ___   ___    _____   _____ _ __ 
+   / _` |/ _` | '_ ` _ \ / _ \  / _ \ \ / / _ \ '__|
+  | (_| | (_| | | | | | |  __/ | (_) \ V /  __/ |   
+   \__, |\__,_|_| |_| |_|\___|  \___/ \_/ \___|_|   
+   |___/                                            
+
+</pre>
+<p>Yeah, that's old school ASCII art. Please note that the first and last lines are
+blank. Also note that the second line begins with a single white space. All other
+lines should be copied verbatim from this document (e.g., you can just copy and
+paste it using your plain text editor).</p>
+<p>The program should exit gracefully. This means that exit code should be zero.
+For example, the following snippet will accomplish this:</p>
+<pre>
+  
+  System.exit(0);
+
+</pre>
+<p>If your program exits with any return codes other than zero (e.g., if your game
+crashes), then some points will be deducted.</p>
+
+<h3>Mark Command</h3>
+<p>In order to mark a square as definitely containing a mine, the 
+<code>mark</code> or <code>m</code> command is used. The syntax format for this 
+command is as follows: <code>-["mark"/"m"]-[(int)]-[(int)]-</code>.
+The second and third tokens indicate the row and column indices, respectively, 
+of the square to be revealed. </p>
+<p>Let's go back to our 10*10 example. Suppose that the player wants to mark
+square (1, 2). Here is an example of what that might look like.</p>
+
+<pre>
+  
+    Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ m 1 2
+
+   Rounds Completed: 1
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   | F |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ 
+
+</pre>
+
+<p>After the player correctly entered the command <code>m 1 2</code>, the state of
+the game updates (e.g., number of rounds completed, the grid, etc.), and the
+next round happens. </p>
+
+<h3>Guess Command</h3>
+<p>In order to mark a square as potentially containing a mine, the 
+<code>guess</code> or <code>g</code> command is used. The syntax format for this 
+command is as follows: <code>-["guess"/"g"]-[(int)]-[(int)]-</code>.
+The second and third tokens indicate the row and column indices, respectively, 
+of the square to be revealed. </p>
+<p>Let's go back to our 10*10 example. Suppose that the player wants to guess
+square (1, 2). Here is an example of what that might look like.</p>
+
+<pre>
+  
+    Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ g 1 2
+
+   Rounds Completed: 1
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   | ? |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ 
+
+</pre>
+<p>After the player correctly entered the command <code>g 1 2</code>, the state of
+the game updates (e.g., number of rounds completed, the grid, etc.), and the
+next round happens.</p>
+
+<h3>Help Command</h3>
+<p>In order to show the help menu, the <code>help</code> or <code>h</code> command
+is used. The syntax format for this command is as follows: <code>-["help"/"h"]-</code>.</p>
+
+<p>Let's go back to our 10*10 example. Suppose that the player wants to display
+the help menu. Here is an example of what that might look like.</p>
+
+<pre>
+  
+    Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ h
+
+  Commands Available...
+   - Reveal: r/reveal row col
+   -   Mark: m/mark   row col
+   -  Guess: g/guess  row col
+   -   Help: h/help
+   -   Quit: q/quit
+
+   Rounds Completed: 1
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ 
+
+</pre>
+<p>After the player correctly entered the command <code>h</code>, the state of
+the game updates (e.g., number of rounds completed, the grid, etc.), the
+help menu is displayed, and the next round happens. </p>
+
+<h3>Quit Command</h3>
+<p>In order to quit the game, the <code>quit</code> or <code>q</code> command
+is used. The syntax format for this command is as follows: <code>-["quit"/"q"]-</code>.</p>
+<p>Let's go back to our 10*10 example. Suppose that the player wants to quit the
+game. Here is an example of what that might look like.</p>
+<pre>
+  
+
+   Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ q
+
+  Y U NO PLAY MORE?
+  Bye!
+
+</pre>
+<p>After the player correctly entered the command <code>q</code>, the game
+displayed the goodbye message and the program exited gracefully.</p>
+
+<p>When the player wins the game, the following message should be displayed
+to the player and the game should exit gracefully:</p>
+
+<pre>
+  
+  CONGRATULATIONS!
+  YOU HAVE WON!
+  SCORE: 15
+
+</pre>
+<p>Note that the first and last lines are blank and that the beginning of the
+other lines contain a single white space. You should replace the score in the
+output with the actual calculated score (mentioned above).</p>
+
+<h3>Displaying Errors</h3>
+<p>In the constructor, if the number of rows and columns is not in proper bounds, 
+then the following message should be displayed and the program should exit
+gracefully:</p>
+
+<pre>
+  
+  Cannot create a mine field with that many rows and/or columns!
+
+</pre>
+
+<p>Note that the first line is blank.</p>
+<p>If a command is not recognized, then the following message should be displayed 
+to the player and one round should be consumed:</p>
+<pre>
+  
+  Command not recognized!
+
+</pre>
+<p>Note that the first line is blank.</p>
+
+<p>Let's go back to our 10*10 example. Suppose that the player either leaves the
+prompt blank or enters in some command that is not recognized.
+Here is an example of what that might look like.
+</p>
+<pre>
+  
+
+   Rounds Completed: 0
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ meh
+
+  Command not recognized!
+
+   Rounds Completed: 1
+
+   0 |   |   |   |   |   |   |   |   |   |   |
+   1 |   |   |   |   |   |   |   |   |   |   |
+   2 |   |   |   |   |   |   |   |   |   |   |
+   3 |   |   |   |   |   |   |   |   |   |   |
+   4 |   |   |   |   |   |   |   |   |   |   |
+   5 |   |   |   |   |   |   |   |   |   |   |
+   6 |   |   |   |   |   |   |   |   |   |   |
+   7 |   |   |   |   |   |   |   |   |   |   |
+   8 |   |   |   |   |   |   |   |   |   |   |
+   9 |   |   |   |   |   |   |   |   |   |   |
+       0   1   2   3   4   5   6   7   8   9
+
+  minesweeper-alpha$ 
+
+</pre>
+<p>After the player entered the unknown command <code>meh</code>, the state of
+the game updates (e.g., number of rounds completed, the grid, etc.), the
+error message is displayed, and the next round happens. </p>
+
+<h3>Seed Files</h3>
+<p>This game can also be setup using seed files. Seed files have the following
+format:
+<ul>
+  <li>The first line contains two integers (separated by white-space) indicating the 
+   number of <code>rows</code> and <code>cols</code>, respectively, for the size 
+   of the mine board. </li>
+   <li>The second line contains an integer indicating the number of mines to be 
+   placed on the mine board.</li>
+   <li>Subsequent lines contain pairs of integers (separated by white space) 
+   indicating the location of each mine.</li>
+</ul>
+</p>
+<p>If the number on line 2 is 5 then there should be 7 lines total in the file.
+That is, one line for the board size, one line for the number of mines, and 5
+lines indicating mine positions. If there are more lines in the file than what
+is expected, then those lines are to be ignored.</p>
+<p>If a seed file is not formatted correctly, then then the program should exit
+and the following message should be displayed:</p>
+
+<pre>
+  
+  Cannot create game with FILENAME, because it is not formatted correctly.
+
+</pre>
+<p>Note that the second line is empty. Also, be sure to replace FILENAME with 
+the actual name of the file.</p>
+
+<p>A seed file is also considered to be malformed if the grid size is not an
+acceptable grid size, if the number of mines exceeds the number of squares in
+the grid, and if a mine location is specified as being outside of the grid.</p>
+<p>An example seed file is present <a href="resources/seed1.txt">here</a>. In order to run
+your program with the seed file, you should be able to use the following
+command:</p>
+
+<pre>
+  
+  $ java Minesweeper seed1.txt
+
+</pre>
+
+<h3>Project Tasks</h3>
+<p>The tasks for this project are mostly related to implementing methods inside of
+<code>Minesweeper.java</code>. There are some additional tasks, though, so
+please read the following list of tasks carefully:
+<ul>
+  <li>Implement or finish implementing the methods in <code>Minesweeper.java</code>
+   as per the project description provided above. you can download this file from <a href="resources/Minesweeper.java">here</a>. Be sure to include in-line 
+   Java comments and white space where appropriate in order to make your code 
+   both readable and clear.</li>
+   
+   <li>Create a <code>README.txt</code> file in the <code>Project1</code> directory to include your name, 810/811 number and instructions on how
+   to both compile and run your program, assuming one is in the <code>Project1</code> directory. </li>
+</ul>
+</p>
+
+<h3>Suggestions</h3>
+<p>This project will be a lot easier if you structure your code properly. There is
+not a single correct way to do this, but here are some ideas for support methods 
+that I think will make things easier. These are just suggestions. If you choose
+to use these, then you will need to implement them yourself.</p>
+<pre>
+  
+  /**
+   * Returns the number of mines adjacent to the specified
+   * square in the grid. 
+   *
+   * @param row the row index of the square
+   * @param col the column index of the square
+   * @return the number of adjacent mines
+   */
+   private int getNumAdjMines(int row, int col) { }
+
+</pre>
+<p>The method above (as well as some other methods) can be implemented a lot more
+easily if you have an easy way to determine if a square is in bounds. Here is
+a suggestion for a method that does just that.</p>
+<pre>
+  
+  /**
+  * Indicates whether or not the square is in the game grid.
+  *
+  * @param row the row index of the square
+  * @param col the column index of the square
+  * @return true if the square is in the game grid; false otherwise
+  */
+  private boolean isInBounds(int row, int col) { }
+
+</pre>
+<p>Also, it might be easier to use two different arrays (of the same size) in order
+to keep track of the game grid. One of the arrays could be a two-dimensional
+boolean or int array that indicates mine locations. The other array could be a 
+two-dimensional char or String array that holds the blanks, numbers, and other
+characters for each square. </p>
+
+<h3>Submission Instructions</h3>
+<p>Submit your <code>Project1</code> directory to <code>cs1302c</code> on <code>nike</code>. You must use  the <code>submit</code> command to submit your work, as shown below:</p>
+<pre>
+  
+  $  submit Project1 cs1302c
+
+</pre>        
+<p><strong>Important</strong>: You should execute the <code>submit</code> command while being in the parent directory of <code>Project1</code>,  i.e. <code>cs1302 </code>(the current directory must be <code>cs1302</code>), or use the absolute path name to <code>Project1</code>.</p>
+<p class="style1">Things to note: </p>
+<ul>
+          <li>
+            <!--[if !supportLists]-->
+            Follow good coding style (proper variable names,  indentation, etc).</li>
+          <li>Include comments in your program.</li>
+        </ul>
+      </div></td>
+    </tr>
+  </table>
+           </div>
+ 
+ 
+ </div>       
+</body>
+</html>

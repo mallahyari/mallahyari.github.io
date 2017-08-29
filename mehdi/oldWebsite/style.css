@@ -1,0 +1,212 @@
+@CHARSET "UTF-8";
+
+.bdClass {
+	background-color:#D8D8D8;
+	margin:0 auto;
+	font-family: "Trebuchet MS", Georgia, Times New Roman, Times, serif;
+	font-size:12px;
+	height:3600px;
+}
+
+#pageContainer{
+	margin:0 auto;
+	width:900px;
+	min-height: 3400px;
+	background-color: white;
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	
+}
+
+#footer {
+	margin:0 auto;
+	background: -moz-linear-gradient(center top , #777777, #332321) repeat scroll 0 0 transparent;
+	/* for Safari and Chrome use below */
+	background: -webkit-gradient(linear, center top,center bottom , from(#777777));
+	width:900px;
+	height:50px;
+	text-align:center;
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.seperator {
+	content:"|";
+	color:#999999;
+}
+
+#clustrMap {
+ 	background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0 auto;
+    width: 900px;
+}
+
+#about {
+	margin-top:10px;
+	text-align:justify;
+	font-size:1.1em;
+}
+
+#about table{
+	padding-top:30px;
+}
+
+#menu{
+	padding:10px;
+}
+
+#info{
+	padding:20px;
+	font-size:14px;
+}
+
+
+.general {
+	margin-bottom:3px;
+	display:block;
+}
+
+.wx {
+	margin-bottom:30px;
+}
+
+h1{
+	font-size:1.2em;
+	margin:0 auto;
+	
+}
+h1 a {
+  color:#0099FF;
+  text-decoration:none;
+}
+
+a:link, a:visited, a:active {
+	color:#0088CC;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.firstname {
+	color:#000000;
+}
+.fullname {
+	font-family: "Trebuchet MS", Georgia, Times, serif;
+	font-size:19pt;
+	font-weight:bold;
+}
+
+h2 {
+	display: block;
+	font-size: 1.4em;
+	border-bottom:1px solid #AAAAAA;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 30px;
+	border-bottom-style:inset;
+	
+}
+
+h3 {
+	margin-left: 20px;
+        margin-right: 30px;
+	border-bottom:1px dotted #DDDDDD;
+	line-height:2em;
+	font-size:11px;
+}
+
+#skills b {
+	font-size:1.2em;
+	line-height:1.8em;
+}
+
+p {
+	padding-left:20px;
+	padding-right:17px;
+	line-height:1.5em;
+	text-align: justify;
+	
+}
+
+ul {
+	padding:0 10px 0 35px;
+	line-height:1.8em;
+	list-style:inside;
+	margin-right: 20px;
+}
+
+ul li {
+	margin-bottom: 10px;
+}
+
+.wx ul {
+	padding:0 20px 0 50px;
+	line-height:1.8em;
+	list-style:square;
+}
+
+.spacer {
+  height:16px;
+}
+
+#conf table {
+	margin:20px;
+	text-align:center;
+	border-collapse:collapse;
+
+}
+
+body {
+	
+	margin:0 auto;
+	font-family: "Trebuchet MS", Georgia, Times New Roman, Times, serif;
+	font-size:14px;
+	height:3600px;
+}
+
+#conf h3 {
+	margin-left: 20px;
+    margin-right: 30px;
+	border-bottom:1px dotted #DDDDDD;
+	line-height:2em;
+	font-size:20px;
+}
+
+.confspancls {
+	font-size: 18px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+#conf p {
+	font-size:20px;
+	font-family: "Trebuchet MS", "Times New Roman", Times, serif;
+	padding-left:20px;
+	padding-right:17px;
+	line-height:1.5em;
+	text-align: justify;
+	
+}
+
+#conf table thead {
+background-color:#DDDDDD;
+}
+
+
+
+
+#conf a:hover {
+	cursor:pointer;
+	color:#FF0033;
+}
+
+
+
+
+
+
+
+

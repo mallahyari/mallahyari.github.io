@@ -1,0 +1,32 @@
+span.bibbase_paper_titleauthoryear {
+    color: #000000;
+    display: block;
+    font-size: 11pt;
+}
+
+span.bibbase_paper_title {
+    color: #000000;
+    display: block;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 12pt;
+}
+
+span.bibbase_paper_author {
+    color: #000000;
+    font-size: 10pt;
+    line-height: 12pt;
+    margin-bottom: 0;
+}
+
+span.bibbase_paper_content {
+    font-size: 10pt;
+    letter-spacing: -0.5px;
+    line-height: 11pt;
+    text-decoration: none;
+}
+
+
+.bibbase_paper {
+    font-size: 10pt;
+}

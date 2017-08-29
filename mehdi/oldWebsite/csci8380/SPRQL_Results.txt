@@ -1,0 +1,234 @@
+Query: select * where { :Albert_Einstein ?p :Alfred_Kleiner}
+Result: {p=http://yago-knowledge.org/resource/hasAcademicAdvisor}
+
+============================================================================================
+
+Query: select * where { :Albert_Einstein ?p ?x .
+				  ?x ?p  :Alfred_Kleiner
+			   }
+Result: 
+		{p=http://yago-knowledge.org/resource/diedIn, x=http://yago-knowledge.org/resource/Princeton,_New_Jersey}
+{p=http://yago-knowledge.org/resource/diedOnDate, x=1955-04-18}
+{p=http://yago-knowledge.org/resource/graduatedFrom, x=http://yago-knowledge.org/resource/ETH_Zurich}
+{p=http://yago-knowledge.org/resource/hasAcademicAdvisor, x=http://yago-knowledge.org/resource/Alfred_Kleiner}
+{p=http://yago-knowledge.org/resource/hasChild, x=http://yago-knowledge.org/resource/Hans_Albert_Einstein}
+{p=http://yago-knowledge.org/resource/hasChild, x=http://yago-knowledge.org/resource/Eduard_Einstein}
+{p=http://yago-knowledge.org/resource/hasChild, x=http://yago-knowledge.org/resource/Lieserl_Einstein}
+{p=http://yago-knowledge.org/resource/hasWikipediaUrl, x=http://en.wikipedia.org/wiki/Albert_Einstein}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Rudolf_Carnap}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/David_Bohm}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Boris_Podolsky}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Th?ophile_de_Donder}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Paco_Ahlgren}
+{p=http://yago-knowledge.org/resource/wasBornIn, x=http://yago-knowledge.org/resource/Ulm}
+{p=http://yago-knowledge.org/resource/hasPreferredName, x=Albert Einstein}
+{p=http://yago-knowledge.org/resource/isMarriedTo, x=http://yago-knowledge.org/resource/Elsa_Einstein}
+{p=http://yago-knowledge.org/resource/isMarriedTo, x=http://yago-knowledge.org/resource/Mileva_Mari?}
+{p=http://yago-knowledge.org/resource/hasPreferredMeaning, x=Albert Einstein}
+{p=http://yago-knowledge.org/resource/hasGivenName, x=Albert}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Brownian_motion}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/General_relativity}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Photoelectric_effect}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Special_relativity}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Bose?Einstein_statistics}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Mass?energy_equivalence}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Einstein_field_equations}
+{p=http://yago-knowledge.org/resource/wasBornOnDate, x=1879-03-14}
+{p=http://yago-knowledge.org/resource/hasGender, x=http://yago-knowledge.org/resource/male}
+{p=http://yago-knowledge.org/resource/hasWonPrize, x=http://yago-knowledge.org/resource/Nobel_Prize_in_Physics}
+{p=http://yago-knowledge.org/resource/hasWonPrize, x=http://yago-knowledge.org/resource/Max_Planck_Medal}
+{p=http://yago-knowledge.org/resource/hasFamilyName, x=Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Enstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=????????}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstein on socialism}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=God does not play dice}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Einstien}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Al Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=A. Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Ejnstejno}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einsetein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstien}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Eienstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einsteinian}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstien, Albert}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Einstein's}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert LaFache Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstein, Albert}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Miracle Year}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Compassionate Zionism and Albert Einstein}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wordnet_person_100007846}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Nobel_laureates_in_Physics}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_refugees}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_scientists_of_German_descent}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Philosophers_of_cosmology}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Fellows_of_the_Leopoldina}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_Nobel_laureates}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_People_from_Ulm}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_vegetarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_people_of_Swiss_descent}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_scientists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_humanitarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_American_scientists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Stateless_persons}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_socialists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_agnostics}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_ETH_Zurich_alumni}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_People_from_the_Kingdom_of_W?rttemberg}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Patent_examiners}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_refugees}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_humanitarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Theoretical_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_immigrants_to_the_United_States}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Cosmologists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_vegetarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_People_associated_with_the_University_of_Zurich}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Academics_of_the_Charles_University}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Religious_skeptics}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_inventors}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_scientists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_19th-century_German_people}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_vegetarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Naturalized_citizens_of_the_United_States}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_humanitarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_Nobel_laureates}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_inventors}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_American_writers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_immigrants_to_the_United_States}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_socialists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_immigrants_to_Switzerland}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Theorists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German-language_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Violinists}
+
+============================================================================================
+
+Query: select * where { :Albert_Einstein ?p ?x .
+				  ?x ?p  :Albert_Einstein
+			   }
+Result: 
+		{p=http://yago-knowledge.org/resource/diedIn, x=http://yago-knowledge.org/resource/Princeton,_New_Jersey}
+{p=http://yago-knowledge.org/resource/diedOnDate, x=1955-04-18}
+{p=http://yago-knowledge.org/resource/graduatedFrom, x=http://yago-knowledge.org/resource/ETH_Zurich}
+{p=http://yago-knowledge.org/resource/hasAcademicAdvisor, x=http://yago-knowledge.org/resource/Alfred_Kleiner}
+{p=http://yago-knowledge.org/resource/hasChild, x=http://yago-knowledge.org/resource/Hans_Albert_Einstein}
+{p=http://yago-knowledge.org/resource/hasChild, x=http://yago-knowledge.org/resource/Eduard_Einstein}
+{p=http://yago-knowledge.org/resource/hasChild, x=http://yago-knowledge.org/resource/Lieserl_Einstein}
+{p=http://yago-knowledge.org/resource/hasWikipediaUrl, x=http://en.wikipedia.org/wiki/Albert_Einstein}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Rudolf_Carnap}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/David_Bohm}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Boris_Podolsky}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Th?ophile_de_Donder}
+{p=http://yago-knowledge.org/resource/influences, x=http://yago-knowledge.org/resource/Paco_Ahlgren}
+{p=http://yago-knowledge.org/resource/wasBornIn, x=http://yago-knowledge.org/resource/Ulm}
+{p=http://yago-knowledge.org/resource/hasPreferredName, x=Albert Einstein}
+{p=http://yago-knowledge.org/resource/isMarriedTo, x=http://yago-knowledge.org/resource/Elsa_Einstein}
+{p=http://yago-knowledge.org/resource/isMarriedTo, x=http://yago-knowledge.org/resource/Mileva_Mari?}
+{p=http://yago-knowledge.org/resource/hasPreferredMeaning, x=Albert Einstein}
+{p=http://yago-knowledge.org/resource/hasGivenName, x=Albert}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Brownian_motion}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/General_relativity}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Photoelectric_effect}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Special_relativity}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Bose?Einstein_statistics}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Mass?energy_equivalence}
+{p=http://yago-knowledge.org/resource/isKnownFor, x=http://yago-knowledge.org/resource/Einstein_field_equations}
+{p=http://yago-knowledge.org/resource/wasBornOnDate, x=1879-03-14}
+{p=http://yago-knowledge.org/resource/hasGender, x=http://yago-knowledge.org/resource/male}
+{p=http://yago-knowledge.org/resource/hasWonPrize, x=http://yago-knowledge.org/resource/Nobel_Prize_in_Physics}
+{p=http://yago-knowledge.org/resource/hasWonPrize, x=http://yago-knowledge.org/resource/Max_Planck_Medal}
+{p=http://yago-knowledge.org/resource/hasFamilyName, x=Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Enstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=????????}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstein on socialism}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=God does not play dice}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Einstien}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Al Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=A. Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Ejnstejno}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einsetein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstien}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Eienstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einsteinian}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstien, Albert}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert Einstein's}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Albert LaFache Einstein}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Einstein, Albert}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Miracle Year}
+{p=http://www.w3.org/2000/01/rdf-schema#label, x=Compassionate Zionism and Albert Einstein}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wordnet_person_100007846}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Nobel_laureates_in_Physics}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_refugees}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_scientists_of_German_descent}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Philosophers_of_cosmology}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Fellows_of_the_Leopoldina}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_Nobel_laureates}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_People_from_Ulm}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_vegetarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_people_of_Swiss_descent}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_scientists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_humanitarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_American_scientists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Stateless_persons}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_socialists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_agnostics}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_ETH_Zurich_alumni}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_People_from_the_Kingdom_of_W?rttemberg}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Patent_examiners}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_refugees}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_humanitarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Theoretical_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_immigrants_to_the_United_States}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Cosmologists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_vegetarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_People_associated_with_the_University_of_Zurich}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Academics_of_the_Charles_University}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Religious_skeptics}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_inventors}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_scientists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_19th-century_German_people}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_vegetarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Naturalized_citizens_of_the_United_States}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_humanitarians}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_Nobel_laureates}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_inventors}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_American_writers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_immigrants_to_the_United_States}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_American_socialists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German_immigrants_to_Switzerland}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Theorists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Swiss_physicists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Jewish_pacifists}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_German-language_philosophers}
+{p=http://www.w3.org/1999/02/22-rdf-syntax-ns#type, x=http://yago-knowledge.org/resource/wikicategory_Violinists}
+
+============================================================================================
+
+============================================================================================
+			   
+  

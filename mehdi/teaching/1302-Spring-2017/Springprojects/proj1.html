@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>Project1</title>
+<style>
+li {
+	padding-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+           <div id="header">
+             <div class="titles">          
+                <h3>
+                                University of Georgia <br />
+                                Computer Science Department
+                </h3>
+                <hr />
+                <h1> CSCI 1302 - Software Development <br />  Fall 2016</h1> 
+                             
+             </div>
+             <div class="spacer"></div>
+           </div>
+           <div id="proj1">
+           	<h2 style="text-align:center">Project 1: Linux and Java warm-up</h2>
+            <p><strong>Due:&nbsp; August 29, 2016</strong></p>
+  <table width="90%" height="74" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="666"><div>
+        <p>In this project, you will create, compile and run a simple Java program on our Linux server (<span class="code_format">nike</span>).</p>
+        <h4>Project  description:</h4>
+        <ol>
+          <li> Create  a directory called <span class="code_format">cs1302</span> in  your home directory on <span class="code_format">nike</span>. &nbsp;You will use this directory to implement   projects in this course.&nbsp; In <span class="code_format">cs1302</span>, create a sub-directory <span class="code_format">Project1</span>. In <span class="code_format">Project1</span>, create two sub-directories <span class="code_format">src</span> and <span class="code_format">classes</span>.  You should place your Java  program (described below) in the <span class="code_format">src</span> directory and your compiled files in the <span class="code_format">classes</span> directory.</li>
+          <li>Design  and implement a Java class called <span class="code_format">User</span>,  which accepts <em>only two</em> command-line arguments and prints out a line of text of the form:</li>
+        
+        
+          <p><span class="code_format">Welcome </span><span class="style2"> <em>your_firstname</em></span> <em>your_lastname</em></span> <span class="code_format">to the nike server!</span><br /><br />
+            For example:<br /><br />
+            <span class="code_format">Welcome JOHN SMITH to the nike server!</span><br/><br/>
+            Your program <em>must not</em> output  anything else.&nbsp; <br />
+            <li>If the number of command-line arguments <em>is not</em> 2 (greater/less), the following line must be printed out and program must end:<br/><br/><span class="code_format">Error! The number of arguments must be two. </span></li>
+            
+            
+            You should use one of the text  editors available on <span class="code_format">nike</span> to  create the source code for your class.&nbsp;  Also, you should use the <span class="code_format">javac</span> and <span class="code_format">java</span> commands to compile and  run your program, respectively.</p>
+          
+        
+          <li>The  part of the required output line after &ldquo;<span class="code_format">Welcome </span>&rdquo; should be the value returned from a call to the static method <span class="code_format">getUserInfo()</span>, provided by the <span class="code_format">UserIdentifier</span> class.&nbsp; The method is declared as:</li>
+        
+        
+          <p><span class="code_format">public static String  getUserInfo(String, String)</span><br /><br />
+            Your program should simply print the string&nbsp; &rdquo;<span class="code_format">Welcome </span>&rdquo; &nbsp;<em>concatenated</em> &nbsp;with the value returned by the <span class="code_format">getUserInfo</span> method <em>concatenated</em> with the string &rdquo;<span class="code_format">to the nike server!</span>&rdquo;. <span class="code_format">getUserInfo</span> method receives the two command-line arguments from the user and returns the uppercase format of the string.</p>
+        
+        
+          <li>The <span class="code_format">UserIdentifier</span> class is included in a  jar file, called <span class="code_format">ident.jar</span>,  which is available in directory <span class="code_format">/home/profs/mehdi/libs</span> on <span class="code_format">nike</span> (the directory and the jar file are publicly readable).&nbsp; You will have to define the <span class="code_format">CLASSPATH</span> environment  variable, or use an appropriate option when compiling and running your program,  in order to gain access to <span class="code_format">ident.jar</span>.</li>
+          </ol>
+        <p>Submit your Project1 directory to <span class="code_format">cs1302b</span> on <span class="code_format">nike</span>. You must use  the <span class="code_format">submit</span> command to submit your work, as shown below:</p>
+        <span class="code_format">$  submit Project1 cs1302b</span>        
+        <p><strong>Important</strong>: You should execute the <span class="code_format">submit</span> command while being in the parent directory of <span class="code_format">Project1</span>,  i.e. <span class="code_format">cs1302 </span>(the current directory must be <span class="code_format">cs1302</span>), or use the absolute path name to <span class="code_format">Project1</span>.</p>
+<p class="style1">Things to note: </p>
+<ul>
+          <li>
+            <!--[if !supportLists]-->
+            Follow good coding style (proper variable names,  indentation, etc).</li>
+          <li>Include comments in your program.</li>
+        </ul>
+      </div></td>
+    </tr>
+  </table>
+           </div>
+ 
+ 
+ </div>       
+</body>
+</html>
