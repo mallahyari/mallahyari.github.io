@@ -63,9 +63,13 @@ h3 {
 }
 
 table {
-	border-collapse:collapse;
-	border-spacing:0;
+	border-collapse: collapse;
+	border-spacing: 0;
 
+}
+.line{
+  clear: both;
+  border-bottom: 2px solid #eee;
 }
 
 #course {
