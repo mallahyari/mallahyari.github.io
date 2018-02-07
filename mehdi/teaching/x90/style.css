@@ -103,7 +103,7 @@ a:hover {
 
 #container li {
 	margin-top:10px;
-	text-align:justify;
+	text-align:left;
 }
 
 .code_format {
@@ -184,6 +184,11 @@ h2 {
 
 .schtable ul {
   line-height: .9;
+}
+
+.schedule li {
+  line-height: 19px;
+  text-align: left;
 }
 
 
