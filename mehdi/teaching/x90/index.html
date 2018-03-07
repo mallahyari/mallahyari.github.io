@@ -1,365 +1,524 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="style.css" rel="stylesheet" type="text/css" />
-<title>CSCI 5090/7090</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>CSCI 5090/7090</title>
 </head>
 
-    <body>
-        <div id="container">
-           <div id="header">
-             <div class="titles">
-                <h3>
-                                <span class="uni">Georgia Southern University</span>
-                </h3>
-                <h3 class="dept">Computer Science Department</h3>
-                <hr />
-                <h1> CSCI 5090/7090 - Machine Learning <br />  Spring 2018</h1>
+<body>
+  <div id="container">
+    <div id="header">
+      <div class="titles">
+        <h3>
+          <span class="uni">Georgia Southern University</span>
+        </h3>
+        <h3 class="dept">Computer Science Department</h3>
+        <hr />
+        <h1> CSCI 5090/7090 - Machine Learning
+          <br /> Spring 2018</h1>
 
-             </div>
-             <div class="spacer"></div>
-           </div>
-           <div id="course">
-           	<table class="line" cellspacing="10" cellpadding="0" border="0">
-            	<tbody>
-                	  <tr class="line">
-                    	<td width="150px"><strong>Info:</strong></td>
-                    	<td><a href="syllabus.pdf">Description and Syllabus</a></td>
-                    </tr>
-                    <tr class="line">
-                    	<td valign="top"><strong>Day/Time:</strong></td>
-                      <td><table border="0">
-                            <tbody>
-                              <tr>
-                                <td>Monday and Wednesday, 9:05 AM - 10:20 AM (CEIT 2212)</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                      </td>
-                    </tr>
-
-                    <tr class="line">
-                    	<td><strong>Instructor:</strong></td>
-                        <td><a href="https://sci2lab.github.io/mehdi/">Mehdi Allahyari</a></td>
-                    </tr>
-                    <tr class="line">
-                    	<td><strong>Email:</strong></td>
-                        <td>mallahyari@georgiasouthern.edu</td>
-                    </tr>
-                    <tr class="line">
-                    	<td><strong>Office:</strong>
-                        <td>CEIT 2321</td>
-                    </tr>
-                    <tr class="line">
-                    	<td><strong>Office Hours:</strong></td>
-                      <td>
-                        <table style="margin: 10px 0px" border="0">
-                            <tr>
-                              <td><em><strong>Monday</strong></em> and <em><strong>Wednesday</strong></em>:</td>
-                              <td>11:00 AM - 12:00 PM</td>
-                            </tr>
-                            <tr>
-                              <td width="200px"><em><strong>Tuesday</strong></em> and <em><strong>Thursday</strong></em>:</td>
-                              <td>3:30 PM - 4:30:00 PM</td>
-                            </tr>
-                          </table>
-                      </td>
-                    </tr>
-                    <tr class="line">
-                    	<td><strong>TA</strong>
-                        <td>
-                          TBA
-                        </td>
-                    </tr>
-                    <tr>
-          <td valign="center"><strong>Prerequisite:</strong></td>
-          <td valign="top" align="left"><p>Students entering the class are expected to have a pre-existing working knowledge of probability, linear algebra, statistics and calculus. For example, it is expected that you know about standard probability distributions and also how to calculate derivatives. In addition, recitation sessions will be held to review some basic concepts. For the programming assignments, you should have good background in programming, and it would be helpful if you know Python.</p></td>
-        </tr>
-        <tr class="line">
-          <td valign="center"><b>Text books: <br>(<em>recommended</em>)</b></td>
-          <td valign="top" align="left">
-                <em><a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html" target="_blank">Machine Learning</a></em>, Tom Mitchel, McGraw-Hill, 1997. <br>
-                <em><a href="http://research.microsoft.com/en-us/um/people/cmbishop/PRML/" target="_blank">Pattern Recognition and Machine Learning</a></em>, Christopher Bishop, Springer, 2007. <br>
-                <em><a href="http://www.cs.ubc.ca/~murphyk/MLbook/index.html" target="_blank">Machine Learning: A probabilistic perspective</a></em>, by Kevin Murphy, MIT Press, 2013.<br>
-                <em><a href="https://web.stanford.edu/~hastie/ElemStatLearn/" target="_blank">The Elements of Statistical Learning: Data Mining, Inference and Prediction</a></em>, Trevor Hastie, Robert Tibshirani, Jerome Friedman, Springer, 2001.
-          </td>
-        </tr>
-
-        <tr class="line">
-          <td width="21%" valign="top" style="padding-top:10px;"><b>Grading:</b></td>
-          <td width="79%" valign="top">
-            <table width="40%" border="1" cellpadding="0" cellspacing="0" style="margin-top:10px;">
-              <tr>
-                <td style="padding-left: 5px">Attendance &amp; Participation</td>
-                <td align="center">5%</td>
-              </tr>
-              <tr>
-                <td style="padding-left: 5px">Homeworks</td>
-                <td align="center">30%</td>
-              </tr>
-              <tr>
-                <td width="79%" style="padding-left: 5px">Midterm</td>
-                <td width="21%" align="center">20%</td>
-              </tr>
-              <tr>
-                <td width="79%" style="padding-left: 5px">Final Exam</td>
-                <td width="21%" align="center">25%</td>
-              </tr>
-              <tr>
-                <td width="79%" style="padding-left: 5px">Final Project</td>
-                <td width="21%" align="center">20%</td>
-              </tr>
-          </table> <br>         </td>
-        </tr>
-        <tr class="line">
-          <td valign="top" style="padding-top:15px;"><strong>Grading Scale:</strong></td>
-          <td valign="top"><table id="gscale" width="150" height="127" border="1" cellpadding="0" cellspacing="0">
-              <tr>
-                <td width="50">85-100 </td>
-                <td width="26">A</td>
-              </tr>
-              <tr>
-                <td>80-85</td>
-                <td>B</td>
-              </tr>
-              <tr>
-                <td>70-80 </td>
-                <td>C</td>
-              </tr>
-              <tr>
-                <td>60-70 </td>
-                <td>D</td>
-              </tr>
-              <tr>
-                <td>&lt; 60</td>
-                <td>F</td>
-              </tr>
-            	</table></td>
-        	  </tr>
-        	  <tr class="line">
-          		<td width="21%" valign="top"><b>Course Description:</b></td>
-          		<td width="79%" valign="top"><p>Machine Learning methods aim to enable computers to automatically learn and improve their performance through experience (e.g., programs that learn to recognize human faces, recommend music and movies, and detect Spam emails).</p><p> This introductory course is designed to give upper­level undergraduate and graduate students a broad overview of many concepts and algorithms in ML. The goal is to provide students with a deep understanding of the subject matter and skills to apply these concepts to real world problems. This course covers the theory and practical algorithms for machine learning from a variety of perspectives. We cover topics such as statistical and probabilistic methods, generative and discriminative models, linear and logistic regression, Bayesian networks, decision tree learning, unsupervised learning and clustering and dimensionality reduction. In addition, the course covers fundamental concepts such as training, validation, overfitting, and error rates.</p></td>
-        	  </tr>
-
-            <tr class="line">
-              <td valign="top"><b>Exam dates:</b></td>
-              <td valign="top">
-                <table border="0" width="100%">
+      </div>
+      <div class="spacer"></div>
+    </div>
+    <div id="course">
+      <table class="line" cellspacing="10" cellpadding="0" border="0">
+        <tbody>
+          <tr class="line">
+            <td width="150px">
+              <strong>Info:</strong>
+            </td>
+            <td>
+              <a href="syllabus.pdf">Description and Syllabus</a>
+            </td>
+          </tr>
+          <tr class="line">
+            <td valign="top">
+              <strong>Day/Time:</strong>
+            </td>
+            <td>
+              <table border="0">
+                <tbody>
                   <tr>
-                    <td width="17%" valign="top">Midterm</td>
-                    <td width="24%" valign="top">03/07/2018</td>
-                    <td width="59%" valign="top"> regular class time</td>
+                    <td>Monday and Wednesday, 9:05 AM - 10:20 AM (CEIT 2212)</td>
                   </tr>
-                  <tr>
-                    <td width="17%" valign="top">Final&nbsp;</td>
-                    <td width="24%" valign="top">05/02/2018</td>
-                    <td width="59%" valign="top">7:30 AM - 9:30 AM in the regular classroom</td>
-                  </tr>
+                </tbody>
               </table>
-              </td>
-            </tr>
+            </td>
+          </tr>
 
-            <tr class="line">
-              <td width="21%" valign="center"><b>Final Project:</b></td>
-              <td width="79%" valign="top"><h3>Important Dates:</h3>
-                <ul>
-                  <li>Wednesday, Fabruary 15, 2018: Project proposals</li>
-                  <li>Wednesday, April 25, 2018: Project report</li>
-                </ul>
-                <h3>Project Description</h3>
-                <ul><li>Read <a href="finalProject.pdf">course project's instructions</a> for all the details regarding the final project.</li></ul>
-                <h3>Notes:</h3>
-                <ul>
-                  <li>Graduate students must work on individual projects</li>
-                  <li>Graduate students must present their work as a poster at the Student Research Symposium that will be held on Thursday, April 19. Here's the <a href="poster_submission_guide.pdf">link</a> for poster submission guidlines.</li>
-                  <li>Undergraduate students are expected (encouraged) to present their project at the Student Research Symposium. The groups participating in the poster session will get 5 points as extra credit.</li>
-                </ul>
-
+          <tr class="line">
+            <td>
+              <strong>Instructor:</strong>
+            </td>
+            <td>
+              <a href="https://sci2lab.github.io/mehdi/">Mehdi Allahyari</a>
+            </td>
+          </tr>
+          <tr class="line">
+            <td>
+              <strong>Email:</strong>
+            </td>
+            <td>mallahyari@georgiasouthern.edu</td>
+          </tr>
+          <tr class="line">
+            <td>
+              <strong>Office:</strong>
+              <td>CEIT 2321</td>
+          </tr>
+          <tr class="line">
+            <td>
+              <strong>Office Hours:</strong>
+            </td>
+            <td>
+              <table style="margin: 10px 0px" border="0">
+                <tr>
+                  <td>
+                    <em>
+                      <strong>Monday</strong>
+                    </em> and
+                    <em>
+                      <strong>Wednesday</strong>
+                    </em>:</td>
+                  <td>11:00 AM - 12:00 PM</td>
+                </tr>
+                <tr>
+                  <td width="200px">
+                    <em>
+                      <strong>Tuesday</strong>
+                    </em> and
+                    <em>
+                      <strong>Thursday</strong>
+                    </em>:</td>
+                  <td>3:30 PM - 4:30:00 PM</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="line">
+            <td>
+              <strong>TA</strong>
+              <td>
+                TBA
               </td>
-            </tr>
+          </tr>
+          <tr>
+            <td valign="center">
+              <strong>Prerequisite:</strong>
+            </td>
+            <td valign="top" align="left">
+              <p>Students entering the class are expected to have a pre-existing working knowledge of probability, linear algebra,
+                statistics and calculus. For example, it is expected that you know about standard probability distributions
+                and also how to calculate derivatives. In addition, recitation sessions will be held to review some basic
+                concepts. For the programming assignments, you should have good background in programming, and it would be
+                helpful if you know Python.</p>
+            </td>
+          </tr>
+          <tr class="line">
+            <td valign="center">
+              <b>Text books:
+                <br>(
+                <em>recommended</em>)</b>
+            </td>
+            <td valign="top" align="left">
+              <em>
+                <a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html" target="_blank">Machine Learning</a>
+              </em>, Tom Mitchel, McGraw-Hill, 1997.
+              <br>
+              <em>
+                <a href="http://research.microsoft.com/en-us/um/people/cmbishop/PRML/" target="_blank">Pattern Recognition and Machine Learning</a>
+              </em>, Christopher Bishop, Springer, 2007.
+              <br>
+              <em>
+                <a href="http://www.cs.ubc.ca/~murphyk/MLbook/index.html" target="_blank">Machine Learning: A probabilistic perspective</a>
+              </em>, by Kevin Murphy, MIT Press, 2013.
+              <br>
+              <em>
+                <a href="https://web.stanford.edu/~hastie/ElemStatLearn/" target="_blank">The Elements of Statistical Learning: Data Mining, Inference and Prediction</a>
+              </em>, Trevor Hastie, Robert Tibshirani, Jerome Friedman, Springer, 2001.
+            </td>
+          </tr>
+
+          <tr class="line">
+            <td width="21%" valign="top" style="padding-top:10px;">
+              <b>Grading:</b>
+            </td>
+            <td width="79%" valign="top">
+              <table width="40%" border="1" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+                <tr>
+                  <td style="padding-left: 5px">Attendance &amp; Participation</td>
+                  <td align="center">5%</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 5px">Homeworks</td>
+                  <td align="center">30%</td>
+                </tr>
+                <tr>
+                  <td width="79%" style="padding-left: 5px">Midterm</td>
+                  <td width="21%" align="center">20%</td>
+                </tr>
+                <tr>
+                  <td width="79%" style="padding-left: 5px">Final Exam</td>
+                  <td width="21%" align="center">25%</td>
+                </tr>
+                <tr>
+                  <td width="79%" style="padding-left: 5px">Final Project</td>
+                  <td width="21%" align="center">20%</td>
+                </tr>
+              </table>
+              <br> </td>
+          </tr>
+          <tr class="line">
+            <td valign="top" style="padding-top:15px;">
+              <strong>Grading Scale:</strong>
+            </td>
+            <td valign="top">
+              <table id="gscale" width="150" height="127" border="1" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="50">85-100 </td>
+                  <td width="26">A</td>
+                </tr>
+                <tr>
+                  <td>80-85</td>
+                  <td>B</td>
+                </tr>
+                <tr>
+                  <td>70-80 </td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>60-70 </td>
+                  <td>D</td>
+                </tr>
+                <tr>
+                  <td>&lt; 60</td>
+                  <td>F</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="line">
+            <td width="21%" valign="top">
+              <b>Course Description:</b>
+            </td>
+            <td width="79%" valign="top">
+              <p>Machine Learning methods aim to enable computers to automatically learn and improve their performance through
+                experience (e.g., programs that learn to recognize human faces, recommend music and movies, and detect Spam
+                emails).
+              </p>
+              <p> This introductory course is designed to give upper­level undergraduate and graduate students a broad overview
+                of many concepts and algorithms in ML. The goal is to provide students with a deep understanding of the subject
+                matter and skills to apply these concepts to real world problems. This course covers the theory and practical
+                algorithms for machine learning from a variety of perspectives. We cover topics such as statistical and probabilistic
+                methods, generative and discriminative models, linear and logistic regression, Bayesian networks, decision
+                tree learning, unsupervised learning and clustering and dimensionality reduction. In addition, the course
+                covers fundamental concepts such as training, validation, overfitting, and error rates.</p>
+            </td>
+          </tr>
+
+          <tr class="line">
+            <td valign="top">
+              <b>Exam dates:</b>
+            </td>
+            <td valign="top">
+              <table border="0" width="100%">
+                <tr>
+                  <td width="17%" valign="top">Midterm</td>
+                  <td width="24%" valign="top">03/07/2018</td>
+                  <td width="59%" valign="top"> regular class time</td>
+                </tr>
+                <tr>
+                  <td width="17%" valign="top">Final&nbsp;</td>
+                  <td width="24%" valign="top">05/02/2018</td>
+                  <td width="59%" valign="top">7:30 AM - 9:30 AM in the regular classroom</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr class="line">
+            <td width="21%" valign="center">
+              <b>Final Project:</b>
+            </td>
+            <td width="79%" valign="top">
+              <h3>Important Dates:</h3>
+              <ul>
+                <li>Wednesday, Fabruary 15, 2018: Project proposals</li>
+                <li>Wednesday, April 25, 2018: Project report</li>
+              </ul>
+              <h3>Project Description</h3>
+              <ul>
+                <li>Read
+                  <a href="finalProject.pdf">course project's instructions</a> for all the details regarding the final project.</li>
+              </ul>
+              <h3>Notes:</h3>
+              <ul>
+                <li>Graduate students must work on individual projects</li>
+                <li>Graduate students must present their work as a poster at the Student Research Symposium that will be held
+                  on Thursday, April 19. Here's the
+                  <a href="poster_submission_guide.pdf">link</a> for poster submission guidlines.</li>
+                <li>Undergraduate students are expected (encouraged) to present their project at the Student Research Symposium.
+                  The groups participating in the poster session will get 5 points as extra credit.</li>
+              </ul>
+
+            </td>
+          </tr>
 
 
 
         </tbody>
       </table>
-     </div> <!-- course div -->
-     <div class="schedule">
-        <h2>Lectures and Schedules (subject to change)</h2>
-        <table class="schtable" border="1">
-          <tr>
-            <th>Week</th><th>Lecture</th><th>Readings and useful links</th><th>Notes</th>
-          </tr>
-          <tr>
-            <td>Jan 08</td>
-            <td>Course Overview<br><a href="slides/intro-1.pdf">Introduction to Machine Learning</a></td>
-            <td><a href="http://www.cs.cmu.edu/%7Etom/pubs/MachineLearning.pdf">The Discipline of Machine Learning</a>, Tom Mitchell<br> <a href="http://www.youtube.com/watch?v=ZT8LszMo0D4">What is Machine Learning?</a>, Bernhard Scholkopf</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Jan 15</td>
-            <td><a href="slides/decisionTrees-2.pdf">Decision Trees</a></td>
-            <td>Readings:
-              <ul><li>Mitchell: Ch 3</li>
-                  <li>Bishop: Ch 14.4</li></ul>
-                  <a href="http://webdocs.cs.ualberta.ca/~aixplore/learning/DecisionTrees/InterArticle/2-DecisionTree.html">Decision Tree Applet</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Jan 22</td>
-            <td>
-              <a href="slides/probability-3.pdf">Review of Probability</a>
-              <ul><li>Random variables, probabilities</li></ul>
-            </td>
-            <td>Readings:
-              <ul><li>Bishop Ch 1 - 1.2.3</li>
-                  <li>Bishop Ch 2 - 2.2</li>
-                  <li><a href="https://www.autonlab.org/_media/tutorials/prob18.pdf">Basic Probability Tutorial</a>, Andrew Moore</li>
+    </div>
+    <!-- course div -->
+    <div class="schedule">
+      <h2>Lectures and Schedules (subject to change)</h2>
+      <table class="schtable" border="1">
+        <tr>
+          <th>Week</th>
+          <th>Lecture</th>
+          <th>Readings and useful links</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Jan 08</td>
+          <td>Course Overview
+            <br>
+            <a href="slides/intro-1.pdf">Introduction to Machine Learning</a>
+          </td>
+          <td>
+            <a href="http://www.cs.cmu.edu/%7Etom/pubs/MachineLearning.pdf">The Discipline of Machine Learning</a>, Tom Mitchell
+            <br>
+            <a href="http://www.youtube.com/watch?v=ZT8LszMo0D4">What is Machine Learning?</a>, Bernhard Scholkopf</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Jan 15</td>
+          <td>
+            <a href="slides/decisionTrees-2.pdf">Decision Trees</a>
+          </td>
+          <td>Readings:
+            <ul>
+              <li>Mitchell: Ch 3</li>
+              <li>Bishop: Ch 14.4</li>
+            </ul>
+            <a href="http://webdocs.cs.ualberta.ca/~aixplore/learning/DecisionTrees/InterArticle/2-DecisionTree.html">Decision Tree Applet</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Jan 22</td>
+          <td>
+            <a href="slides/probability-3.pdf">Review of Probability</a>
+            <ul>
+              <li>Random variables, probabilities</li>
+            </ul>
+          </td>
+          <td>Readings:
+            <ul>
+              <li>Bishop Ch 1 - 1.2.3</li>
+              <li>Bishop Ch 2 - 2.2</li>
+              <li>
+                <a href="https://www.autonlab.org/_media/tutorials/prob18.pdf">Basic Probability Tutorial</a>, Andrew Moore</li>
 
-              </ul>
-              <a href="https://developers.google.com/edu/python/">Python tutorial</a><br>
-            </td>
-            <td><a href="https://sci2lab.github.io/mehdi/teaching/x90/hw/1/homework1.pdf">Homework 1 OUT</a></td>
-          </tr>
-          <tr>
-            <td>Jan 29</td>
-            <td><a href="slides/probability-3.pdf">Probability and Estimation</a>
-                <ul><li>Bayes rule, MLE, MAP</li></ul></td>
-            <td>Readings:<br>
-              <ul>
-                <li>Mitchell: <a href="http://www.cs.cmu.edu/~tom/mlbook/Joint_MLE_MAP.pdf">Estimating Probabilities: MLE and MAP</a></li>
-              </ul>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Feb 05</td>
-            <td><a href="slides/naiveBayes-4.pdf">Naive Bayes</a><br>
-                <ul><li>Conditional Independence</li>
-                    <li>Naive Bayes: why and how</li>
-                </ul>
-            </td>
-            <td>Readings:<br>
-                <ul>
-                  <li>Mitchell Ch 6</li>
-                  <li>Mitchell: <a href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Naive Bayes and Logistic Regression</a></li>
-                  <li>Text Classification Examples: <a href="https://www.inf.ed.ac.uk/teaching/courses/inf2b/learnnotes/inf2b-learn07-notes-nup.pdf">[Link 1]</a>, <a href="https://www.3pillarglobal.com/insights/document-classification-using-multinomial-naive-bayes-classifier">[Link 2]</a></li>
-                </ul>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Feb 12</td>
-            <td><a href="slides/naiveBayes-4.pdf">Gaussian Naive Bayes</a><br>
-                <ul><li>Gaussian Bayes classifiers</li>
-                    <li>Document Classification</li>
-                    <li>Brain image classification</li></ul>
-            </td>
-            <td>Readings:<br>
-                <ul>
-                  <li>Mitchell: <a href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Naive Bayes and Logistic Regression</a></li>
-                </ul>
-            </td>
-            <td>Homework 1 Due <br> <a href="https://sci2lab.github.io/mehdi/teaching/x90/hw/2/homework2.pdf">Homework 2 OUT</a></td>
-          </tr>
-          <tr>
-            <td>Feb 19</td>
-            <td width="300"><a href="slides/linearRegression-5.pdf">Linear Regression</a><br>
-              <ul>
-                <li>Generative/Discriminative models</li>
-                <li>Minimizing squared error and maximizing data likelihood</li>
-                <li>Regularization</li>
-              </ul>
-            </td>
-            <td>Readings:<br>
-                <ul>
-                  <li>Linear regression <a href="examples/gradientDescent.ipynb">[Demo]</a></li>
-                  <li>Andrew Ng: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf">Lecture notes</a></li>
-                  <li>Siraj Raval: <a href="https://www.youtube.com/watch?v=XdM6ER7zTLk">[Video]</a></li>
-                  <li>Linear regression  <a href="http://mste.illinois.edu/users/exner/java.f/leastsquares/">[Applet]</a></li>
-                </ul>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Feb 26</td>
-            <td><a href="slides/logisticRegression-5.pdf">Logistic Regression</a><br>
-              <ul>
-                <li>Logistic Regression: Maximizing Conditional Likelihood</li>
-                <li>Gradient descent as a general learning (optimization) method</li>
-              </ul>
-            </td>
-            <td>Readings:<br>
-                <ul>
-                  <li>Mitchell: <a href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Naive Bayes and Logistic Regression</a></li>
-                  <li>Andrew Ng: <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf">Lecture notes</a></li>
-                  <li>Ng and Jordan <a href="http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf">[Paper]</a></li>
-                  <li>Logistic regression  <a href="http://www.cs.technion.ac.il/~rani/LocBoost/">[Applet]</a></li>
-                </ul>
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Mar 05</td>
-            <td>Midterm Review</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Mar 07</td>
-            <td>Midterm Exam</td>
-            <td></td>
-            <td>Homework 3 out</td>
-          </tr>
-          <tr>
-            <td>Mar 12</td>
-            <td>Spring Break</td>
-            <td></td>
-            <td>No Classes</td>
-          </tr>
-          <tr>
-            <td>Mar 19</td>
-            <td>Ensemble Methods</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Mar 26</td>
-            <td>Graphical Models</td>
-            <td></td>
-            <td>Homework 4 out</td>
-          </tr>
-          <tr>
-            <td>Apr 02</td>
-            <td>Hidden Markov Models</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Apr 09</td>
-            <td>Clustering</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Apr 16</td>
-            <td>Dimensinality Reduction</td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Apr 23</td>
-            <td>Neural Networks</td>
-            <td></td>
-            <td></td>
-          </tr>
+            </ul>
+            <a href="https://developers.google.com/edu/python/">Python tutorial</a>
+            <br>
+          </td>
+          <td>
+            <a href="https://sci2lab.github.io/mehdi/teaching/x90/hw/1/homework1.pdf">Homework 1 OUT</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Jan 29</td>
+          <td>
+            <a href="slides/probability-3.pdf">Probability and Estimation</a>
+            <ul>
+              <li>Bayes rule, MLE, MAP</li>
+            </ul>
+          </td>
+          <td>Readings:
+            <br>
+            <ul>
+              <li>Mitchell:
+                <a href="http://www.cs.cmu.edu/~tom/mlbook/Joint_MLE_MAP.pdf">Estimating Probabilities: MLE and MAP</a>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 05</td>
+          <td>
+            <a href="slides/naiveBayes-4.pdf">Naive Bayes</a>
+            <br>
+            <ul>
+              <li>Conditional Independence</li>
+              <li>Naive Bayes: why and how</li>
+            </ul>
+          </td>
+          <td>Readings:
+            <br>
+            <ul>
+              <li>Mitchell Ch 6</li>
+              <li>Mitchell:
+                <a href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Naive Bayes and Logistic Regression</a>
+              </li>
+              <li>Text Classification Examples:
+                <a href="https://www.inf.ed.ac.uk/teaching/courses/inf2b/learnnotes/inf2b-learn07-notes-nup.pdf">[Link 1]</a>,
+                <a href="https://www.3pillarglobal.com/insights/document-classification-using-multinomial-naive-bayes-classifier">[Link 2]</a>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 12</td>
+          <td>
+            <a href="slides/naiveBayes-4.pdf">Gaussian Naive Bayes</a>
+            <br>
+            <ul>
+              <li>Gaussian Bayes classifiers</li>
+              <li>Document Classification</li>
+              <li>Brain image classification</li>
+            </ul>
+          </td>
+          <td>Readings:
+            <br>
+            <ul>
+              <li>Mitchell:
+                <a href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Naive Bayes and Logistic Regression</a>
+              </li>
+            </ul>
+          </td>
+          <td>Homework 1 Due
+            <br>
+            <a href="https://sci2lab.github.io/mehdi/teaching/x90/hw/2/homework2.pdf">Homework 2 OUT</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Feb 19</td>
+          <td width="300">
+            <a href="slides/linearRegression-5.pdf">Linear Regression</a>
+            <br>
+            <ul>
+              <li>Generative/Discriminative models</li>
+              <li>Minimizing squared error and maximizing data likelihood</li>
+              <li>Regularization</li>
+            </ul>
+          </td>
+          <td>Readings:
+            <br>
+            <ul>
+              <li>Linear regression
+                <a href="examples/gradientDescent.ipynb">[Demo]</a>
+              </li>
+              <li>Andrew Ng:
+                <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf">Lecture notes</a>
+              </li>
+              <li>Siraj Raval:
+                <a href="https://www.youtube.com/watch?v=XdM6ER7zTLk">[Video]</a>
+              </li>
+              <li>Linear regression
+                <a href="http://mste.illinois.edu/users/exner/java.f/leastsquares/">[Applet]</a>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 26</td>
+          <td>
+            <a href="slides/logisticRegression-5.pdf">Logistic Regression</a>
+            <br>
+            <ul>
+              <li>Logistic Regression: Maximizing Conditional Likelihood</li>
+              <li>Gradient descent as a general learning (optimization) method</li>
+            </ul>
+          </td>
+          <td>Readings:
+            <br>
+            <ul>
+              <li>Mitchell:
+                <a href="http://www.cs.cmu.edu/%7Etom/mlbook/NBayesLogReg.pdf">Naive Bayes and Logistic Regression</a>
+              </li>
+              <li>Andrew Ng:
+                <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf">Lecture notes</a>
+              </li>
+              <li>Ng and Jordan
+                <a href="http://papers.nips.cc/paper/2020-on-discriminative-vs-generative-classifiers-a-comparison-of-logistic-regression-and-naive-bayes.pdf">[Paper]</a>
+              </li>
+              <li>Logistic regression
+                <a href="http://www.cs.technion.ac.il/~rani/LocBoost/">[Applet]</a>
+              </li>
+            </ul>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 05</td>
+          <td>Midterm Review</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 07</td>
+          <td>Midterm Exam</td>
+          <td></td>
+          <td>
+            <a href="https://sci2lab.github.io/mehdi/teaching/x90/hw/3/homework3.pdf">Homework 3 OUT</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Mar 12</td>
+          <td>Spring Break</td>
+          <td></td>
+          <td>No Classes</td>
+        </tr>
+        <tr>
+          <td>Mar 19</td>
+          <td>Ensemble Methods</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 26</td>
+          <td>Graphical Models</td>
+          <td></td>
+          <td>Homework 4 out</td>
+        </tr>
+        <tr>
+          <td>Apr 02</td>
+          <td>Hidden Markov Models</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 09</td>
+          <td>Clustering</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 16</td>
+          <td>Dimensinality Reduction</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 23</td>
+          <td>Neural Networks</td>
+          <td></td>
+          <td></td>
+        </tr>
 
 
-        </table>
-     </div>
+      </table>
+    </div>
 
 
 
-       </div>
-    </body>
+  </div>
+</body>
+
 </html>
