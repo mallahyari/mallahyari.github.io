@@ -3,9 +3,9 @@
 
 body {
   background-color: #eee;
-	margin: 0 auto;
-	font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;
-	font-size:14px;
+  margin: 0 auto;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 14px;
   line-height: 1.5;
   min-height: 1500px;
 }
@@ -23,12 +23,12 @@ body {
 }
 
 p {
-	line-height: 1.5;
-	text-align: justify;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 #container {
-	width:60%;
+  width: 60%;
   margin: 70px auto;
   padding: 70px;
   background-color: #fff;
@@ -37,140 +37,142 @@ p {
 }
 
 h3 {
-	line-height:16pt;
+  line-height: 16pt;
 }
 
 #header {
-    margin: 1.5em 0 0.5em 1.5em;
+  margin: 1.5em 0 0.5em 1.5em;
 }
 
 #header .titles h1 {
-    float: left;
-    font-size: 16pt;
-    width: 70%;
+  float: left;
+  font-size: 16pt;
+  width: 70%;
 }
 
 #header .titles hr {
-    background-color: #e6e4e2;
-    border: 0 none;
-    height: 4px;
-    margin: 0;
+  background-color: #e6e4e2;
+  border: 0 none;
+  height: 4px;
+  margin: 0;
 }
 
 .spacer {
-    clear: both;
-    height: 1px;
+  clear: both;
+  height: 1px;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 
 }
-.line{
+
+.line {
   clear: both;
   border-bottom: 2px solid #eee;
 }
 
 #course {
-	margin: 1.5em 0 0.5em 1.5em;
-	font-size:15px;
-	line-height:22px;
+  margin: 1.5em 0 0.5em 1.5em;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 a {
-    color: #0088cc;
-    font-weight: bold;
-    text-decoration: none;
+  color: #0088cc;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #15317e;
-    text-decoration: underline;
+  color: #15317e;
+  text-decoration: underline;
 }
 
 .note_red {
-	color: #b40404;
+  color: #b40404;
 }
 
-#container > div {
-	margin: 1.5em 0 0.5em 1.5em;
+#container>div {
+  margin: 1.5em 0 0.5em 1.5em;
 }
 
 #container #policies {
-	line-height:19px;
+  line-height: 19px;
 }
 
 #container li {
-	margin-top:10px;
-	text-align:left;
+  margin-top: 10px;
+  text-align: left;
 }
 
 .code_format {
-	font-family:"Courier New", monospace;
+  font-family: "Courier New", monospace;
 }
 
 #container #rules {
-	line-height:19px;
+  line-height: 19px;
 }
 
 #container #links {
-	line-height:19px;
+  line-height: 19px;
 }
 
 #news table {
-	line-height:20px;
+  line-height: 20px;
 }
 
 #gscale {
-	margin-top:15px;
-	margin-bottom:15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #gscale td {
-	padding-left:5px;
+  padding-left: 5px;
 }
 
 pre {
-	border-radius: 3px;
-	font-family:"Courier New", monospace;
-	background-color: #f7f7f7;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  background-color: #f7f7f7;
 }
 
 .eval {
-	color: #990000;
-	font-weight: bold;
-	font-size: 12pt;
+  color: #990000;
+  font-weight: bold;
+  font-size: 12pt;
 }
 
-#taoffice td{
-	padding-left: 10px;
-	padding-right: 10px;
+#taoffice td {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #proj1 ol li {
-	margin-top: 0px;
+  margin-top: 0px;
 }
 
 code {
-	font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
-	background-color: #f7f7f7;
-	padding: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #f7f7f7;
+  padding: 3px;
 }
 
 h2 {
-  font-size: 28px;
+  /* font-size: 28px; */
   margin: 40px 0 20px 0;
 }
 
 .schedule th {
   font-weight: bold;
-  font-size:15px;
+  font-size: 15px;
   border-collapse: collapse;
   text-align: left;
   padding: 15px;
 
 }
+
 .schedule td {
   padding: 15px;
   margin-left: 10px;
@@ -202,4 +204,3 @@ h2 {
   margin: 20px 0 0 0;
   /* font-size: 1.6em; */
 }
-
